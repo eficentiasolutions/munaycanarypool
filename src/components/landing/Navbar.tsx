@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Droplets, Menu, X } from "lucide-react";
 import { useLocation } from "react-router-dom";
-import logoImage from "@/assets/drpools-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const navLinks = [
   { label: "Servicios", href: "#servicios" },
@@ -63,7 +63,7 @@ const Navbar = () => {
             <div className="transition-transform hover:scale-105 relative">
               <img
                 src={logoImage}
-                alt="DR Pools"
+                alt="Munay Canary Pool"
                 width="96"
                 height="96"
                 className="h-12 md:h-14 w-auto object-contain max-w-[140px] md:max-w-none"

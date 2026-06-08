@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    /* Brand Colors - DR Pools Identity */
-    --brand-primary: 220 90% 35%;
-    /* Royal Blue from logo */
-    --brand-primary-light: 220 80% 50%;
-    --brand-teal: 190 90% 50%;
-    /* Cyan/Aqua from logo */
-    --brand-teal-light: 190 90% 60%;
-    --brand-dark: 220 50% 10%;
+    /* Brand Colors - Munay Canary Pool Identity */
+    --brand-primary: 225 72% 16%;
+    /* Dark Navy from logo "MUNAY" */
+    --brand-primary-light: 210 68% 45%;
+    --brand-teal: 192 70% 52%;
+    /* Crystal Cyan from logo gem */
+    --brand-teal-light: 192 70% 65%;
+    --brand-dark: 225 55% 10%;
     --brand-pain: 16 80% 40%;
     --brand-pain-light: 16 80% 96%;
 
@@ -27,30 +27,30 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 210 100% 25%;
+    --primary: 225 72% 16%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 90% 35%;
+    --secondary: 210 68% 48%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 195 100% 45%;
-    --accent-foreground: 210 100% 10%;
+    --accent: 192 70% 52%;
+    --accent-foreground: 225 72% 10%;
 
     --destructive: 16 80% 40%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 213 56% 24%;
+    --ring: 210 68% 48%;
 
     --radius: 0.75rem;
 
     /* Shadows */
-    --shadow-glow: 0 0 20px hsla(195, 100%, 45%, 0.4), 0 0 40px hsla(195, 100%, 45%, 0.2);
-    --shadow-glow-hover: 0 0 30px hsla(195, 100%, 45%, 0.6), 0 0 60px hsla(195, 100%, 45%, 0.3);
+    --shadow-glow: 0 0 20px hsla(192, 70%, 52%, 0.4), 0 0 40px hsla(192, 70%, 52%, 0.2);
+    --shadow-glow-hover: 0 0 30px hsla(192, 70%, 52%, 0.6), 0 0 60px hsla(192, 70%, 52%, 0.3);
     --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   }
@@ -65,10 +65,10 @@
     --popover: 222 47% 15%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 195 100% 55%;
-    --primary-foreground: 210 100% 10%;
+    --primary: 192 70% 60%;
+    --primary-foreground: 225 72% 10%;
 
-    --secondary: 205 90% 50%;
+    --secondary: 210 68% 55%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217 33% 17%;

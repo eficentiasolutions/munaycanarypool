@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Star, Quote } from "lucide-react";
-import logoImage from "@/assets/drpools-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png";
 import javierImage from "@/assets/javier-mendez.png";
 import elenaImage from "@/assets/elena-torres.png";
 import robertoImage from "@/assets/roberto-sanchis.png";
@@ -10,23 +10,23 @@ import robertoImage from "@/assets/roberto-sanchis.png";
 const testimonials = [
   {
     name: "Javier Méndez",
-    role: "Villa vacacional en Costa Adeje por Los Realojos",
+    role: "Villa vacacional en las Islas Canarias",
     image: javierImage,
     quote:
-      "Vivo en la península y siempre me preocupaba el estado de la piscina al llegar a la isla. Con DR Pools, llego y el agua está perfecta cada vez. El servicio de reportes con fotos tras cada visita me da una tranquilidad total.",
+      "Vivo en la península y siempre me preocupaba el estado de la piscina al llegar. Con Munay Canary Pool, llego y el agua está perfecta cada vez. El servicio de reportes con fotos tras cada visita me da una tranquilidad total.",
     rating: 5,
   },
   {
     name: "Elena Torres",
-    role: "Administradora de Fincas en Victoria",
+    role: "Administradora de Fincas en Canarias",
     image: elenaImage,
     quote:
-      "Gestionamos varias comunidades en el norte y sur de la isla, y la exigencia es máxima. Desde que contamos con ellos, las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima de aquí.",
+      "Gestionamos varias comunidades y la exigencia es máxima. Desde que contamos con Munay Canary Pool, las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima canario.",
     rating: 5,
   },
   {
     name: "Roberto Sanchis",
-    role: "Chalet en Tacoronte",
+    role: "Chalet en Gran Canaria",
     image: robertoImage,
     quote:
       "Nuestra piscina se puso verde por la calima dos días antes de una fiesta. Vinieron de urgencia, diagnosticaron el problema y en 24 horas el agua estaba cristalina. Literalmente nos salvaron el evento.",
@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
           <div className="flex justify-center mb-6">
             <img
               src={logoImage}
-              alt="DR Pools"
+              alt="Munay Canary Pool"
               width="96"
               height="96"
               className="h-12 md:h-16 w-auto object-contain"

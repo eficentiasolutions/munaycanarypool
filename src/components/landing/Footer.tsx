@@ -1,5 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
-import logoImage from "@/assets/drpools-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
               <div>
                 <img
                   src={logoImage}
-                  alt="DR Pools"
+                  alt="Munay Canary Pool"
                   loading="lazy"
                   width="96"
                   height="96"
@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/70 mb-4 md:mb-6 max-w-md text-sm md:text-base">
-              Redefinimos la experiencia de tener piscina. Nuestro enfoque técnico y proactivo garantiza un agua saludable y cristalina siempre, para que tú solo te ocupes de lo importante: disfrutarla.
+              En Munay Canary Pool redefinimos la experiencia de tener piscina en las Islas Canarias. Nuestro enfoque técnico y proactivo garantiza un agua saludable y cristalina todo el año, para que tú solo te ocupes de lo importante: disfrutarla.
             </p>
             <div className="flex gap-3 md:gap-4">
               {[
@@ -94,10 +94,10 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-6 md:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4">
           <p className="text-white/50 text-xs md:text-sm">
-            © {new Date().getFullYear()} DR Pools. Todos los derechos reservados.
+            © {new Date().getFullYear()} Munay Canary Pool. Todos los derechos reservados.
           </p>
           <p className="text-white/50 text-xs md:text-sm">
-            Hecho por <a href="https://eficentiasolutions.com" target="_blank" rel="noopener noreferrer">Eficentia Solutions</a> para DR Pools.
+            Hecho por <a href="https://eficentiasolutions.com" target="_blank" rel="noopener noreferrer">Eficentia Solutions</a> para Munay Canary Pool.
           </p>
         </div>
       </div>

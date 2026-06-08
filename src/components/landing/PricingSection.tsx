@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Check, X, Star, Zap, Droplets, Sparkles, Crown, AlertCircle, Info } from "lucide-react";
-import logoImage from "@/assets/drpools-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const plans = [
   {

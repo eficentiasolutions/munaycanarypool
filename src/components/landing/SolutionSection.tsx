@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Sparkles, FlaskConical, Wrench, Clock, Shield, Leaf } from "lucide-react";
-import logoImage from "@/assets/drpools-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const services = [
   {
@@ -61,7 +61,7 @@ const SolutionSection = () => {
       <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 opacity-[0.04] pointer-events-none select-none z-0">
         <img
           src={logoImage}
-          alt="DR Pools Brand"
+          alt="Munay Canary Pool Brand"
           loading="lazy"
           className="w-[800px] h-[800px] object-contain -rotate-12"
         />

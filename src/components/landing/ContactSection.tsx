@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Send, Phone, Mail, MapPin, Clock, AlertTriangle, CheckCircle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import logoImage from "@/assets/drpools-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -52,7 +52,7 @@ const ContactSection = () => {
       <div className="absolute top-1/2 right-1/2 md:right-0 md:top-20 translate-x-1/2 md:translate-x-1/4 -translate-y-1/2 opacity-[0.07] pointer-events-none select-none z-0">
         <img
           src={logoImage}
-          alt="DR Pools Brand"
+          alt="Munay Canary Pool Brand"
           loading="lazy"
           className="w-[300px] h-[300px] md:w-[600px] md:h-[600px] object-contain rotate-[-15deg] grayscale"
         />
@@ -113,7 +113,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground text-sm md:text-base">Teléfono</h4>
                   <p className="text-muted-foreground text-xs md:text-base">
-                    <a href="tel:+34624187418" className="hover:text-secondary transition-colors">+34 624 187 418</a>
+                    <a href="tel:+34600000000" className="hover:text-secondary transition-colors">+34 600 000 000</a>
                   </p>
                 </div>
               </div>
@@ -125,7 +125,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground text-sm md:text-base">Email</h4>
                   <p className="text-muted-foreground text-xs md:text-base">
-                    <a href="mailto:info@drpools.es" className="hover:text-secondary transition-colors">info@drpools.es</a>
+                    <a href="mailto:info@munaycanarypool.es" className="hover:text-secondary transition-colors">info@munaycanarypool.es</a>
                   </p>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground text-sm md:text-base">Zonas</h4>
-                  <p className="text-muted-foreground text-xs md:text-base">Tenerife</p>
+                  <p className="text-muted-foreground text-xs md:text-base">Islas Canarias</p>
                 </div>
               </div>
 
@@ -161,13 +161,13 @@ const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <form
-              action="https://formsubmit.co/info@drpools.es"
+              action="https://formsubmit.co/info@munaycanarypool.es"
               method="POST"
               className="bg-card rounded-2xl md:rounded-3xl shadow-sm p-5 md:p-8"
             >
               <input type="hidden" name="_next" value={`${typeof window !== "undefined" ? window.location.origin : ""}/gracias`} />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value={`Nuevo contacto desde DR Pools ${selectedPlan ? `- Interesado en ${selectedPlan}` : ''}`} />
+              <input type="hidden" name="_subject" value={`Nuevo contacto desde Munay Canary Pool ${selectedPlan ? `- Interesado en ${selectedPlan}` : ''}`} />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="Plan_Seleccionado" value={selectedPlan || "Revisión Gratuita (General)"} />
 

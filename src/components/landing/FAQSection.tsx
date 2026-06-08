@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import logoImage from "@/assets/drpools-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const faqs = [
   {
@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "¿Con qué frecuencia necesita mantenimiento mi piscina?",
     answer:
-      "En Tenerife, debido a nuestro clima privilegiado, la piscina se disfruta todo el año. Recomendamos mantenimiento semanal para garantizar la calidad del agua constante, aunque nuestros planes se adaptan si tienes un uso más estacional.",
+      "En Canarias, debido a nuestro clima privilegiado, la piscina se disfruta todo el año. Recomendamos mantenimiento semanal para garantizar la calidad del agua constante, aunque nuestros planes se adaptan si tienes un uso más estacional.",
   },
   {
     question: "¿Qué pasa si no estoy satisfecho con el servicio?",
@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "¿Trabajan en mi zona?",
     answer:
-      "Actualmente damos servicio en toda la isla de Tenerife. Contáctanos para confirmar disponibilidad en tu ubicación específica.",
+      "Actualmente damos servicio en las Islas Canarias. Contáctanos para confirmar disponibilidad en tu ubicación específica.",
   },
   {
     question: "¿Puedo cambiar o cancelar mi plan en cualquier momento?",
@@ -49,7 +49,7 @@ const FAQSection = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.05] pointer-events-none select-none z-0">
           <img
             src={logoImage}
-            alt="DR Pools Brand"
+            alt="Munay Canary Pool Brand"
             className="w-[600px] h-[600px] object-contain rotate-12"
           />
         </div>
@@ -64,7 +64,7 @@ const FAQSection = () => {
           <div className="flex justify-center mb-6">
             <img
               src={logoImage}
-              alt="DR Pools"
+              alt="Munay Canary Pool"
               width="96"
               height="96"
               className="h-12 md:h-16 w-auto object-contain"

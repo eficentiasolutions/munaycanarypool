@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
 import confetti from "canvas-confetti";
 import { Helmet } from "react-helmet";
-import logoImage from "@/assets/drpools-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const ThankYou = () => {
     const isMounted = useRef(false);
@@ -51,7 +51,7 @@ const ThankYou = () => {
     return (
         <div className="flex min-h-screen items-center justify-center bg-background px-4 relative overflow-hidden">
             <Helmet>
-                <title>¡Gracias por contactarnos! | DR Pools</title>
+                <title>¡Gracias por contactarnos! | Munay Canary Pool</title>
                 <meta name="description" content="Hemos recibido tu solicitud correctamente. Te contactaremos pronto." />
                 <meta name="robots" content="noindex" />
             </Helmet>
@@ -60,7 +60,7 @@ const ThankYou = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none z-0">
                 <img
                     src={logoImage}
-                    alt="DR Pools Brand"
+                    alt="Munay Canary Pool Brand"
                     loading="lazy"
                     className="w-[600px] h-[600px] object-contain opacity-50 grayscale"
                 />
@@ -70,7 +70,7 @@ const ThankYou = () => {
                 <div className="mb-8 flex justify-center flex-col items-center gap-6">
                     <img
                         src={logoImage}
-                        alt="DR Pools"
+                        alt="Munay Canary Pool"
                         loading="lazy"
                         className="h-16 w-auto object-contain drop-shadow-md"
                     />
@@ -84,7 +84,7 @@ const ThankYou = () => {
                 </h1>
 
                 <p className="mb-8 text-lg text-muted-foreground">
-                    Gracias por confiar en <strong>DR Pools</strong>. Hemos recibido tus datos y uno de nuestros expertos se pondrá en contacto contigo en menos de 24 horas.
+                    Gracias por confiar en <strong>Munay Canary Pool</strong>. Hemos recibido tus datos y uno de nuestros expertos se pondrá en contacto contigo en menos de 24 horas.
                 </p>
 
                 <p className="mb-8 text-sm text-gray-400">

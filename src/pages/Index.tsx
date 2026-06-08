@@ -17,22 +17,22 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>DR Pools | Mantenimiento Profesional de Piscinas | Inspección Gratis</title>
+        <title>Munay Canary Pool | Mantenimiento Profesional de Piscinas | Inspección Gratis</title>
         <meta
           name="description"
-          content="Servicio profesional de mantenimiento de piscinas. Recupera tu tiempo libre con DR Pools. Primera inspección de balance químico GRATIS. +500 familias satisfechas."
+          content="Servicio profesional de mantenimiento de piscinas. Recupera tu tiempo libre con Munay Canary Pool. Primera inspección de balance químico GRATIS. +500 familias satisfechas."
         />
         <meta
           name="keywords"
-          content="mantenimiento piscinas, limpieza piscinas, balance químico piscina, servicio piscinas Tenerife, mantenimiento piscinas"
+          content="mantenimiento piscinas Canarias, limpieza piscinas Gran Canaria, balance químico piscina, servicio piscinas Islas Canarias, mantenimiento piscinas"
         />
-        <meta property="og:title" content="DR Pools | Mantenimiento Profesional de Piscinas" />
+        <meta property="og:title" content="Munay Canary Pool | Mantenimiento Profesional de Piscinas" />
         <meta
           property="og:description"
           content="¿Tu piscina es un placer o una carga? Recupera 80h/año con nuestro servicio profesional. Inspección GRATIS."
         />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://drpools.es" />
+        <link rel="canonical" href="https://munaycanarypool.es" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
     return (
         <div className="min-h-screen bg-background flex flex-col">
             <Helmet>
-                <title>Política de Privacidad | DR Pools</title>
+                <title>Política de Privacidad | Munay Canary Pool</title>
                 <meta name="robots" content="noindex, follow" />
             </Helmet>
             <Navbar />
@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
                 <div className="prose prose-sm md:prose-base dark:prose-invert max-w-none">
                     <h3>1. INFORMACIÓN AL USUARIO</h3>
                     <p>
-                        <strong>DR Pools</strong>, como Responsable del Tratamiento, le informa que, según lo dispuesto en el Reglamento (UE) 2016/679, de 27 de abril, (RGPD) y en la L.O. 3/2018, de 5 de diciembre, de protección de datos y garantía de los derechos digitales (LOPDGDD), trataremos su datos tal y como reflejamos en la presente Política de Privacidad.
+                        <strong>Munay Canary Pool</strong>, como Responsable del Tratamiento, le informa que, según lo dispuesto en el Reglamento (UE) 2016/679, de 27 de abril, (RGPD) y en la L.O. 3/2018, de 5 de diciembre, de protección de datos y garantía de los derechos digitales (LOPDGDD), trataremos su datos tal y como reflejamos en la presente Política de Privacidad.
                     </p>
 
                     <h3>2. FINALIDAD DEL TRATAMIENTO</h3>
@@ -50,10 +50,10 @@ const PrivacyPolicy = () => {
 
                     <h3>6. DERECHOS</h3>
                     <p>
-                        Usted tiene derecho a obtener confirmación sobre si en DR Pools estamos tratando sus datos personales por tanto tiene derecho a acceder a sus datos personales, rectificar los datos inexactos o solicitar su supresión cuando los datos ya no sean necesarios.
+                        Usted tiene derecho a obtener confirmación sobre si en Munay Canary Pool estamos tratando sus datos personales por tanto tiene derecho a acceder a sus datos personales, rectificar los datos inexactos o solicitar su supresión cuando los datos ya no sean necesarios.
                     </p>
                     <p>
-                        Puede ejercer sus derechos dirigiendo una comunicación a la dirección de correo: <a href="mailto:info@drpools.es">info@drpools.es</a>.
+                        Puede ejercer sus derechos dirigiendo una comunicación a la dirección de correo: <a href="mailto:info@munaycanarypool.es">info@munaycanarypool.es</a>.
                     </p>
                 </div>
             </main>
