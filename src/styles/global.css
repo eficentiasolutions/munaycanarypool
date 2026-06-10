@@ -6,83 +6,93 @@
 
 @layer base {
   :root {
-    /* Brand Colors - Munay Canary Pool Identity */
-    --brand-primary: 225 72% 16%;
-    /* Dark Navy from logo "MUNAY" */
-    --brand-primary-light: 210 68% 45%;
-    --brand-teal: 192 70% 52%;
-    /* Crystal Cyan from logo gem */
-    --brand-teal-light: 192 70% 65%;
-    --brand-dark: 225 55% 10%;
+    /* Brand Colors - Munay Canary Pool — extraídos del logo real (pixel analysis)
+       #004060 HSL(200,100%,18%) — dominante: texto MUNAY + arcos
+       #0060A0 HSL(204,100%,31%) — azul medio: texto CANARY POOL + olas
+       #4080C0 HSL(210, 50%,50%) — azul cornflower: medios/destellos
+       #A0C0E0 HSL(210, 50%,75%) — crystal sky: reflejos cristal
+    */
+    --brand-primary: 200 100% 18%;
+    /* #004060 — azul petróleo oscuro (dominante del logo) */
+    --brand-primary-light: 204 100% 31%;
+    /* #0060A0 — azul medio CANARY POOL / olas */
+    --brand-teal: 210 50% 50%;
+    /* #4080C0 — cornflower (destellos y acentos) */
+    --brand-teal-light: 210 50% 75%;
+    /* #A0C0E0 — crystal sky light (reflejos) */
+    --brand-dark: 200 100% 11%;
+    /* Deep dark para fondos oscuros */
     --brand-pain: 16 80% 40%;
     --brand-pain-light: 16 80% 96%;
 
     /* Core semantic colors */
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 204 30% 98%;
+    --foreground: 200 60% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 200 60% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 200 60% 12%;
 
-    --primary: 225 72% 16%;
+    --primary: 200 100% 18%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 68% 48%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 204 100% 31%;
+    /* #0060A0 — CTA buttons: contraste 5:1 sobre blanco ✓ */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 204 30% 96%;
+    --muted-foreground: 204 20% 45%;
 
-    --accent: 192 70% 52%;
-    --accent-foreground: 225 72% 10%;
+    --accent: 210 50% 50%;
+    /* #4080C0 — hover states, highlights */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 16 80% 40%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 210 68% 48%;
+    --border: 204 25% 88%;
+    --input: 204 25% 88%;
+    --ring: 204 100% 31%;
 
     --radius: 0.75rem;
 
-    /* Shadows */
-    --shadow-glow: 0 0 20px hsla(192, 70%, 52%, 0.4), 0 0 40px hsla(192, 70%, 52%, 0.2);
-    --shadow-glow-hover: 0 0 30px hsla(192, 70%, 52%, 0.6), 0 0 60px hsla(192, 70%, 52%, 0.3);
+    /* Shadows — usando azul cornflower del logo */
+    --shadow-glow: 0 0 20px hsla(210, 50%, 50%, 0.4), 0 0 40px hsla(210, 50%, 50%, 0.2);
+    --shadow-glow-hover: 0 0 30px hsla(210, 50%, 50%, 0.6), 0 0 60px hsla(210, 50%, 50%, 0.3);
     --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   }
 
   .dark {
-    --background: 222 47% 11%;
+    --background: 200 60% 10%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 15%;
+    --card: 200 55% 14%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 15%;
+    --popover: 200 55% 14%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 192 70% 60%;
-    --primary-foreground: 225 72% 10%;
+    --primary: 210 50% 65%;
+    --primary-foreground: 200 100% 10%;
 
-    --secondary: 210 68% 55%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 50% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 200 40% 18%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 195 100% 45%;
+    --accent: 210 50% 55%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 16 80% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 168 84% 42%;
+    --border: 200 40% 20%;
+    --input: 200 40% 20%;
+    --ring: 204 100% 40%;
   }
 }
 
@@ -125,7 +135,7 @@
   .btn-glow::before {
     content: '';
     @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300;
-    background: linear-gradient(135deg, hsla(195, 100%, 55%, 0.3), hsla(205, 90%, 40%, 0.3));
+    background: linear-gradient(135deg, hsla(210, 50%, 60%, 0.3), hsla(200, 100%, 25%, 0.3));
   }
 
   .btn-glow:hover::before {
@@ -213,7 +223,7 @@
   .dark-banner {
     background: linear-gradient(135deg,
         hsl(var(--brand-dark)) 0%,
-        hsl(222, 47%, 15%) 100%);
+        hsl(200, 80%, 14%) 100%);
   }
 
   /* Water ripple effect */
