@@ -30,11 +30,11 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover object-[center_30%] scale-[1.12] origin-top"
       />
 
-      {/* ── Overlay sutil: legibilidad sin perder la imagen ── */}
-      {/* Capa base muy ligera para unificar el brillo */}
+      {/* ── Overlay sutil: legibilidad + tinte azul marca muy suave ── */}
       <div className="absolute inset-0 bg-black/20" />
-      {/* Gradiente superior más pronunciado donde está el navbar y el texto */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-transparent" />
+      {/* Tinte azul petróleo muy sutil — coherente con la marca */}
+      <div className="absolute inset-0 bg-brand-primary/20" />
 
       {/* ── Content ── */}
       <div className="relative container mx-auto px-5 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[100svh] pt-24 pb-10 md:pt-32 md:pb-16">
