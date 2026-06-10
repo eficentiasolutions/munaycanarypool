@@ -66,7 +66,7 @@ const Navbar = () => {
                 alt="Munay Canary Pool"
                 width="96"
                 height="96"
-                className="h-12 md:h-14 w-auto object-contain max-w-[140px] md:max-w-none"
+                className="h-16 md:h-20 w-auto object-contain max-w-[200px] md:max-w-none"
               />
             </div>
           </a>
