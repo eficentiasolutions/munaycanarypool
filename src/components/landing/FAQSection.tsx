@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import logoImage from "@/assets/munay-canary-pool-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png?url";
 
 const faqs = [
   {

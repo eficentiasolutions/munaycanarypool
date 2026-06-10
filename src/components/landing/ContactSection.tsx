@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Send, Phone, Mail, MapPin, Clock, AlertTriangle, CheckCircle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import logoImage from "@/assets/munay-canary-pool-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png?url";
 
 const ContactSection = () => {
   const ref = useRef(null);

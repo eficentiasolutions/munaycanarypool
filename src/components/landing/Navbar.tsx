@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logoImage from "@/assets/munay-canary-pool-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png?url";
 
 const navLinks = [
   { label: "Servicios", href: "#servicios" },

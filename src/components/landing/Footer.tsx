@@ -1,5 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
-import logoImage from "@/assets/munay-canary-pool-logo.png";
+import logoImage from "@/assets/munay-canary-pool-logo.png?url";
 
 const Footer = () => {
   return (
