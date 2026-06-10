@@ -20,23 +20,19 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-brand-dark">
 
-      {/* ── Background image ── */}
+      {/* ── Background image — recortamos el watermark inferior derecho ampliando el encuadre ── */}
       <img
         src={heroPoolPremium}
         alt="Piscina infinity premium al atardecer en Canarias"
         fetchPriority="high"
         loading="eager"
         decoding="async"
-        className="absolute inset-0 w-full h-full object-cover object-[center_65%] md:object-[center_60%]"
+        className="absolute inset-0 w-full h-full object-cover object-[center_30%] scale-[1.12] origin-top"
       />
 
-      {/* ── Overlays: oscuro arriba para texto, desvanece abajo ── */}
-      {/* Capa base: oscurece la imagen preservando el color */}
-      <div className="absolute inset-0 bg-brand-primary/55" />
-      {/* Gradiente adicional: más oscuro en la zona del texto, más claro abajo */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/70 via-brand-dark/40 to-brand-dark/20" />
-      {/* Viñeta sutil en los bordes laterales */}
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/30 via-transparent to-brand-dark/30" />
+      {/* ── Overlay mínimo: solo para legibilidad del texto, sin filtrar la imagen ── */}
+      {/* Franja oscura solo en la zona superior donde está el texto */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-transparent" />
 
       {/* ── Content ── */}
       <div className="relative container mx-auto px-5 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[100svh] pt-24 pb-10 md:pt-32 md:pb-16">
@@ -44,7 +40,7 @@ const HeroSection = () => {
 
           {/* H1 */}
           <h1
-            className="text-[2.4rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-5 md:mb-7 drop-shadow-lg animate-fade-in-up"
+            className="text-[2.4rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-5 md:mb-7 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)] animate-fade-in-up"
           >
             ¿Tu piscina es un{" "}
             <span
