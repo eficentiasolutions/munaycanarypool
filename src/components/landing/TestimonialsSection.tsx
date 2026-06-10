@@ -8,25 +8,25 @@ const testimonials = [
     name: "Javier M.",
     initials: "JM",
     color: "bg-blue-600",
-    location: "Villa vacacional, Gran Canaria",
+    location: "Villa vacacional, Maspalomas",
     quote:
-      "Vivo en la península y siempre me preocupaba el estado de la piscina al llegar. Con Munay Canary Pool llego y el agua está perfecta cada vez. Los reportes con fotos tras cada visita me dan tranquilidad total.",
+      "Vivo en la península y siempre me preocupaba el estado de la piscina al llegar a Gran Canaria. Con Munay Canary Pool llego y el agua está perfecta cada vez. Los reportes con fotos tras cada visita me dan tranquilidad total.",
     rating: 5,
   },
   {
     name: "Elena T.",
     initials: "ET",
     color: "bg-cyan-600",
-    location: "Administradora de Fincas, Canarias",
+    location: "Administradora de Fincas, Las Palmas de Gran Canaria",
     quote:
-      "Gestionamos varias comunidades y la exigencia es máxima. Desde que contamos con ellos las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima canario.",
+      "Gestionamos varias comunidades en Las Palmas y la exigencia es máxima. Desde que contamos con ellos las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima de la isla.",
     rating: 5,
   },
   {
     name: "Roberto S.",
     initials: "RS",
     color: "bg-indigo-600",
-    location: "Chalet privado, Gran Canaria",
+    location: "Chalet privado, Telde",
     quote:
       "Nuestra piscina se puso verde por la calima dos días antes de una fiesta. Vinieron de urgencia, diagnosticaron el problema y en 24 horas el agua estaba cristalina. Literalmente nos salvaron el evento.",
     rating: 5,
@@ -35,7 +35,7 @@ const testimonials = [
     name: "Carmen L.",
     initials: "CL",
     color: "bg-teal-600",
-    location: "Comunidad de vecinos, Lanzarote",
+    location: "Comunidad de vecinos, Vecindario",
     quote:
       "Llevábamos años con problemas de algas cada verano. Desde que contratamos el plan Premium no hemos tenido ni una sola incidencia. Profesionales de verdad, cumplen siempre lo que prometen.",
     rating: 5,
@@ -44,7 +44,7 @@ const testimonials = [
     name: "Miguel A.",
     initials: "MA",
     color: "bg-sky-700",
-    location: "Propietario de chalet, Fuerteventura",
+    location: "Propietario de chalet, San Bartolomé de Tirajana",
     quote:
       "El precio es justo y el servicio impecable. Vinieron a revisar la piscina sin coste y nos explicaron todo con detalle. Ahora tenemos el agua siempre en perfecto estado sin preocuparnos de nada.",
     rating: 5,
