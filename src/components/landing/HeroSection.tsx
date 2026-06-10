@@ -2,113 +2,126 @@ import { motion } from "framer-motion";
 import { Droplets, Shield, Clock, UserCheck } from "lucide-react";
 import heroPoolPremium from "@/assets/hero-munay-canary-pool.webp?url";
 
+const badges = [
+  { icon: Shield,   text: "Garantía 100%" },
+  { icon: Clock,    text: "Respuesta 24h"  },
+  { icon: Droplets, text: "Químicos Certif." },
+  { icon: UserCheck,text: "Técnicos Cualif." },
+];
+
 const HeroSection = () => {
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent("plan-selected", { detail: "Revisión Gratuita" }));
+    const target = document.getElementById("formulario-contacto") ?? document.getElementById("contacto");
+    target?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="relative min-h-screen overflow-hidden bg-slate-50">
-      {/* Background Image - Optimized for LCP */}
+    <section className="relative min-h-[100svh] overflow-hidden bg-brand-dark">
+
+      {/* ── Background image ── */}
       <img
         src={heroPoolPremium}
-        alt="Piscina premium en las Islas Canarias al atardecer"
+        alt="Piscina infinity premium al atardecer en Canarias"
         fetchPriority="high"
         loading="eager"
-        className="absolute inset-0 w-full h-full object-cover object-bottom md:object-center transition-transform duration-1000 scale-[1.35] origin-bottom md:scale-105 md:origin-center opacity-100"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover object-[center_65%] md:object-[center_60%]"
       />
 
-      {/* Light/Blue Filter Effect - Fresh & Premium */}
-      <div className="absolute inset-0 bg-cyan-50/30 mix-blend-overlay" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-white/60 via-transparent to-white/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
+      {/* ── Overlays: oscuro arriba para texto, desvanece abajo ── */}
+      {/* Capa base: oscurece la imagen preservando el color */}
+      <div className="absolute inset-0 bg-brand-primary/55" />
+      {/* Gradiente adicional: más oscuro en la zona del texto, más claro abajo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/70 via-brand-dark/40 to-brand-dark/20" />
+      {/* Viñeta sutil en los bordes laterales */}
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/30 via-transparent to-brand-dark/30" />
 
-      {/* Water ripple effect - Subtle */}
-      <div className="water-ripple opacity-10" />
+      {/* ── Content ── */}
+      <div className="relative container mx-auto px-5 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[100svh] pt-24 pb-10 md:pt-32 md:pb-16">
+        <div className="w-full max-w-3xl mx-auto text-center">
 
-      {/* Decorative elements - Subtle gradients */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-brand-teal/20 rounded-full blur-3xl mix-blend-multiply" />
-      <div className="absolute bottom-20 right-10 w-48 h-48 bg-brand-primary/10 rounded-full blur-3xl mix-blend-multiply" />
-
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-screen pt-20 pb-24 md:pt-32 md:pb-32">
-        <div className="w-full max-w-4xl mx-auto text-center flex-1 flex flex-col justify-center">
-          {/* Main H1 - CSS animation for visual appeal without blocking LCP */}
+          {/* H1 */}
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-800 leading-[1.1] mb-6 md:mb-8 tracking-tight animate-fade-in-up"
+            className="text-[2.4rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-5 md:mb-7 drop-shadow-lg animate-fade-in-up"
           >
             ¿Tu piscina es un{" "}
-            <span className="font-extrabold text-secondary" style={{ WebkitTextStroke: '2px white', paintOrder: 'stroke fill' }}>
+            <span
+              className="font-extrabold"
+              style={{ color: "hsl(210,50%,75%)" }}   /* #A0C0E0 – crystal sky del logo */
+            >
               placer
             </span>
             <br className="hidden sm:block" /> o una{" "}
             <span className="relative inline-block whitespace-nowrap px-1">
-              <span className="absolute bottom-1 left-0 w-full h-3 bg-brand-pain/40 -skew-x-6"></span>
-              <span className="relative font-bold">carga?</span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-brand-pain/60 -skew-x-6 rounded" />
+              <span className="relative font-bold text-white">carga?</span>
             </span>
           </h1>
 
-          {/* Strong Promise - CSS animation with delay */}
-          <div className="mb-8 md:mb-12 animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
-            <div className="inline-block bg-white/90 backdrop-blur-md rounded-2xl px-5 py-4 md:px-8 md:py-6 border border-brand-primary/10 shadow-2xl hover:bg-white transition-colors duration-300">
-              <p className="text-base sm:text-lg md:text-2xl font-bold text-brand-dark leading-tight">
-                🎁 <span className="opacity-90">OFERTA LIMITADA: </span>
-                <span className="text-brand-primary font-extrabold tracking-wide block sm:inline mt-1 sm:mt-0">
-                  Revisión GRATIS
-                </span>
+          {/* Offer badge */}
+          <div
+            className="mb-5 md:mb-8 animate-fade-in-up"
+            style={{ animationDelay: "0.1s", animationFillMode: "both" }}
+          >
+            <div className="inline-block bg-white/95 backdrop-blur-md rounded-2xl px-5 py-3.5 md:px-8 md:py-5 shadow-2xl border border-white/40">
+              <p className="text-sm sm:text-lg md:text-xl font-bold text-brand-dark leading-snug">
+                🎁{" "}
+                <span className="opacity-80">OFERTA LIMITADA: </span>
+                <span className="text-brand-primary font-extrabold">Revisión GRATIS</span>
               </p>
-              <p className="text-brand-primary/80 text-xs sm:text-sm mt-2 font-medium tracking-wide uppercase">
-                Solo este mes • Cupos limitados
+              <p className="text-brand-primary/70 text-[0.7rem] sm:text-xs mt-1.5 font-semibold tracking-widest uppercase">
+                Solo este mes &nbsp;•&nbsp; Cupos limitados
               </p>
             </div>
           </div>
 
-          {/* CTA Button with Shadow Glow - CSS animation with delay */}
-          <div className="mb-10 md:mb-16 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+          {/* CTA Button */}
+          <div
+            className="mb-7 md:mb-12 animate-fade-in-up"
+            style={{ animationDelay: "0.2s", animationFillMode: "both" }}
+          >
             <a
               href="#contacto"
-              onClick={(e) => {
-                e.preventDefault();
-                const event = new CustomEvent('plan-selected', { detail: 'Revisión Gratuita' });
-                window.dispatchEvent(event);
-                const targetElement = document.getElementById('formulario-contacto') || document.getElementById('contacto');
-                if (targetElement) {
-                  targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="btn-solid inline-flex items-center gap-3 text-base md:text-lg lg:text-xl py-4 px-8 shadow-lg shadow-brand-primary/20 hover:shadow-brand-primary/40"
+              onClick={scrollToContact}
+              className="btn-solid inline-flex items-center gap-2.5 text-base md:text-lg py-4 px-8 shadow-xl shadow-brand-primary/30 hover:shadow-brand-primary/50 w-full sm:w-auto justify-center"
             >
-              <Droplets className="w-5 h-5 md:w-6 md:h-6" />
+              <Droplets className="w-5 h-5 flex-shrink-0" />
               Quiero mi Revisión GRATIS
             </a>
           </div>
 
-          {/* Trust indicators - CSS animation with delay */}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 sm:gap-8 lg:gap-12 animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
-            {[
-              { icon: Shield, text: "Garantía 100%" },
-              { icon: Clock, text: "Respuesta 24h" },
-              { icon: Droplets, text: "Químicos Certif." },
-              { icon: UserCheck, text: "Técnicos Cualif." },
-            ].map((item, index) => (
+          {/* Trust badges — grid 2×2 en móvil, fila en desktop */}
+          <div
+            className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 animate-fade-in"
+            style={{ animationDelay: "0.3s", animationFillMode: "both" }}
+          >
+            {badges.map(({ icon: Icon, text }, i) => (
               <div
-                key={index}
-                className="flex items-center gap-2 text-brand-dark bg-white/70 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-white/20 font-medium transition-transform hover:scale-105"
+                key={i}
+                className="flex items-center justify-center gap-2 bg-white/15 backdrop-blur-md text-white px-3 py-2.5 rounded-xl border border-white/25 font-medium text-xs sm:text-sm shadow-md"
               >
-                <item.icon className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
-                <span className="text-xs sm:text-sm whitespace-nowrap">{item.text}</span>
+                <Icon className="w-4 h-4 flex-shrink-0 text-[hsl(210,50%,80%)]" />
+                <span className="whitespace-nowrap">{text}</span>
               </div>
             ))}
           </div>
+
         </div>
 
-        {/* Scroll indicator - Properly positioned */}
+        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
           className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:block"
         >
-          <div className="w-6 h-10 border-2 border-brand-dark/20 rounded-full flex justify-center pt-2 backdrop-blur-sm">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-1.5 bg-brand-primary rounded-full"
+              className="w-1.5 h-1.5 bg-white/70 rounded-full"
             />
           </div>
         </motion.div>
