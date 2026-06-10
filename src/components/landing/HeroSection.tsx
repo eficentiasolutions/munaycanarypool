@@ -30,9 +30,11 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover object-[center_30%] scale-[1.12] origin-top"
       />
 
-      {/* ── Overlay mínimo: solo para legibilidad del texto, sin filtrar la imagen ── */}
-      {/* Franja oscura solo en la zona superior donde está el texto */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-transparent" />
+      {/* ── Overlay sutil: legibilidad sin perder la imagen ── */}
+      {/* Capa base muy ligera para unificar el brillo */}
+      <div className="absolute inset-0 bg-black/20" />
+      {/* Gradiente superior más pronunciado donde está el navbar y el texto */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-transparent" />
 
       {/* ── Content ── */}
       <div className="relative container mx-auto px-5 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[100svh] pt-24 pb-10 md:pt-32 md:pb-16">
