@@ -26,7 +26,7 @@ const testimonials = [
     name: "Roberto S.",
     initials: "RS",
     color: "bg-indigo-600",
-    location: "Chalet privado, Tenerife",
+    location: "Chalet privado, Gran Canaria",
     quote:
       "Nuestra piscina se puso verde por la calima dos días antes de una fiesta. Vinieron de urgencia, diagnosticaron el problema y en 24 horas el agua estaba cristalina. Literalmente nos salvaron el evento.",
     rating: 5,
