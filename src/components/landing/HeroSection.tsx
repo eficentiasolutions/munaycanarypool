@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Droplets, Shield, Clock, UserCheck } from "lucide-react";
-import heroPoolPremium from "@/assets/hero-pool-maintenance-v2.png";
+import heroPoolPremium from "@/assets/hero-munay-canary-pool.png";
 
 const HeroSection = () => {
   return (
@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background Image - Optimized for LCP */}
       <img
         src={heroPoolPremium}
-        alt="Piscina cristalina mantenida profesionalmente"
+        alt="Piscina premium en las Islas Canarias al atardecer"
         fetchPriority="high"
         loading="eager"
         className="absolute inset-0 w-full h-full object-cover object-bottom md:object-center transition-transform duration-1000 scale-[1.35] origin-bottom md:scale-105 md:origin-center opacity-100"
