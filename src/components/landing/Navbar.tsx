@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Droplets, Menu, X } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const navLinks = [
@@ -14,10 +13,10 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const isHome = location.pathname === "/";
+  const [isHome, setIsHome] = useState(true);
 
   useEffect(() => {
+    setIsHome(window.location.pathname === "/" || window.location.pathname === "");
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };

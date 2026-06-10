@@ -1,14 +1,9 @@
-import { Helmet } from "react-helmet";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
 const LegalNotice = () => {
     return (
         <div className="min-h-screen bg-background flex flex-col">
-            <Helmet>
-                <title>Aviso Legal | Munay Canary Pool</title>
-                <meta name="robots" content="noindex, follow" />
-            </Helmet>
             <Navbar />
             <main className="flex-grow container mx-auto px-4 py-24 md:py-32 max-w-4xl">
                 <h1 className="text-3xl md:text-4xl font-bold mb-8">Aviso Legal</h1>

@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CookiesPolicy from '../components/landing/CookiesPolicy';
+const seoProps = {
+  title: "Política de Cookies | Munay Canary Pool",
+  description: "Política de cookies de Munay Canary Pool.",
+  canonical: "https://munaycanarypool.es/cookies/",
+  noindex: true,
+};
+---
+<BaseLayout {...seoProps}>
+  <CookiesPolicy client:load />
+</BaseLayout>

@@ -1,8 +1,6 @@
 import { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
 import confetti from "canvas-confetti";
-import { Helmet } from "react-helmet";
 import logoImage from "@/assets/munay-canary-pool-logo.png";
 
 const ThankYou = () => {
@@ -50,11 +48,6 @@ const ThankYou = () => {
 
     return (
         <div className="flex min-h-screen items-center justify-center bg-background px-4 relative overflow-hidden">
-            <Helmet>
-                <title>¡Gracias por contactarnos! | Munay Canary Pool</title>
-                <meta name="description" content="Hemos recibido tu solicitud correctamente. Te contactaremos pronto." />
-                <meta name="robots" content="noindex" />
-            </Helmet>
 
             {/* Background Watermark */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none z-0">
@@ -91,12 +84,12 @@ const ThankYou = () => {
                     Serás redirigido al inicio automáticamente en unos segundos...
                 </p>
 
-                <Link
-                    to="/"
+                <a
+                    href="/"
                     className="inline-flex items-center rounded-xl bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
                 >
                     Volver al Inicio
-                </Link>
+                </a>
             </div>
         </div>
     );

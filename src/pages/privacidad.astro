@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PrivacyPolicy from '../components/landing/PrivacyPolicy';
+const seoProps = {
+  title: "Política de Privacidad | Munay Canary Pool",
+  description: "Política de privacidad y protección de datos de Munay Canary Pool.",
+  canonical: "https://munaycanarypool.es/privacidad/",
+  noindex: true,
+};
+---
+<BaseLayout {...seoProps}>
+  <PrivacyPolicy client:load />
+</BaseLayout>

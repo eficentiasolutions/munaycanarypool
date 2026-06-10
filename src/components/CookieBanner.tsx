@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const CookieBanner = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Check if user has already accepted cookies
         const cookiesAccepted = localStorage.getItem("cookies-accepted");
         if (!cookiesAccepted) {
-            // Show banner after a small delay
             const timer = setTimeout(() => {
                 setIsVisible(true);
             }, 1000);
@@ -37,26 +33,25 @@ const CookieBanner = () => {
                     <p>
                         Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación.
                         Si continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información en nuestra{" "}
-                        <Link to="/cookies" className="text-primary hover:underline underline-offset-4 font-medium">
+                        <a href="/cookies" className="text-primary hover:underline underline-offset-4 font-medium">
                             Política de Cookies
-                        </Link>
+                        </a>
                         .
                     </p>
                 </div>
                 <div className="flex items-center gap-3 shrink-0">
-                    <Button
-                        variant="outline"
+                    <button
                         onClick={rejectCookies}
-                        className="hover:bg-destructive/10 hover:text-destructive whitespace-nowrap"
+                        className="px-4 py-2 border border-border rounded-lg text-sm font-medium hover:bg-destructive/10 hover:text-destructive transition-colors whitespace-nowrap"
                     >
                         Rechazar
-                    </Button>
-                    <Button
+                    </button>
+                    <button
                         onClick={acceptCookies}
-                        className="bg-primary text-primary-foreground hover:bg-primary/90 whitespace-nowrap"
+                        className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
                     >
                         Aceptar
-                    </Button>
+                    </button>
                     <button
                         onClick={() => setIsVisible(false)}
                         className="p-2 hover:bg-muted rounded-full transition-colors text-muted-foreground"

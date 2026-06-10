@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/landing/Navbar';
+import HeroSection from '../components/landing/HeroSection';
+import PainSection from '../components/landing/PainSection';
+import AgitationBanner from '../components/landing/AgitationBanner';
+import SolutionSection from '../components/landing/SolutionSection';
+import DataVizSection from '../components/landing/DataVizSection';
+import TestimonialsSection from '../components/landing/TestimonialsSection';
+import PricingSection from '../components/landing/PricingSection';
+import FAQSection from '../components/landing/FAQSection';
+import ContactSection from '../components/landing/ContactSection';
+import Footer from '../components/landing/Footer';
+import WhatsAppButton from '../components/landing/WhatsAppButton';
+import CookieBanner from '../components/CookieBanner';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://munaycanarypool.es/#empresa",
+      "name": "Munay Canary Pool",
+      "description": "Servicio premium de mantenimiento de piscinas en las Islas Canarias. Agua cristalina garantizada todo el año.",
+      "url": "https://munaycanarypool.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://munaycanarypool.es/og-image.jpg",
+        "width": 1200,
+        "height": 400
+      },
+      "image": "https://munaycanarypool.es/og-image.jpg",
+      "telephone": "+34600000000",
+      "email": "info@munaycanarypool.es",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Islas Canarias",
+        "addressCountry": "ES"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Gran Canaria" },
+        { "@type": "AdministrativeArea", "name": "Tenerife" },
+        { "@type": "AdministrativeArea", "name": "Lanzarote" },
+        { "@type": "AdministrativeArea", "name": "Fuerteventura" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "13:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "16:00",
+          "closes": "19:00"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://munaycanarypool.es/#sitio",
+      "url": "https://munaycanarypool.es",
+      "name": "Munay Canary Pool",
+      "inLanguage": "es-ES",
+      "publisher": { "@id": "https://munaycanarypool.es/#empresa" }
+    }
+  ]
+};
+
+const seoProps = {
+  title: "Munay Canary Pool | Mantenimiento Premium de Piscinas en Canarias",
+  description: "Servicio premium de mantenimiento de piscinas en las Islas Canarias. Agua cristalina garantizada. Primera revisión GRATIS. Más de 500 familias satisfechas.",
+  canonical: "https://munaycanarypool.es/",
+  schema,
+};
+---
+<BaseLayout {...seoProps}>
+  <Navbar client:load />
+  <WhatsAppButton client:load />
+  <CookieBanner client:load />
+  <main>
+    <HeroSection client:load />
+    <PainSection client:visible />
+    <AgitationBanner client:visible />
+    <section id="servicios">
+      <SolutionSection client:visible />
+    </section>
+    <section id="resultados">
+      <DataVizSection client:visible />
+    </section>
+    <TestimonialsSection client:visible />
+    <PricingSection client:visible />
+    <section id="faq">
+      <FAQSection client:visible />
+    </section>
+    <ContactSection client:visible />
+  </main>
+  <Footer client:visible />
+</BaseLayout>

@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NotFound from '../components/landing/NotFound';
+const seoProps = {
+  title: "404 - Página no encontrada | Munay Canary Pool",
+  description: "Esta página no existe.",
+  canonical: "https://munaycanarypool.es/",
+  noindex: true,
+};
+---
+<BaseLayout {...seoProps}>
+  <NotFound client:load />
+</BaseLayout>

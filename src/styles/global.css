@@ -1,0 +1,317 @@
+/* Google Fonts loaded asynchronously from HTML for better performance */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors - Munay Canary Pool Identity */
+    --brand-primary: 225 72% 16%;
+    /* Dark Navy from logo "MUNAY" */
+    --brand-primary-light: 210 68% 45%;
+    --brand-teal: 192 70% 52%;
+    /* Crystal Cyan from logo gem */
+    --brand-teal-light: 192 70% 65%;
+    --brand-dark: 225 55% 10%;
+    --brand-pain: 16 80% 40%;
+    --brand-pain-light: 16 80% 96%;
+
+    /* Core semantic colors */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 225 72% 16%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 68% 48%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 192 70% 52%;
+    --accent-foreground: 225 72% 10%;
+
+    --destructive: 16 80% 40%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 68% 48%;
+
+    --radius: 0.75rem;
+
+    /* Shadows */
+    --shadow-glow: 0 0 20px hsla(192, 70%, 52%, 0.4), 0 0 40px hsla(192, 70%, 52%, 0.2);
+    --shadow-glow-hover: 0 0 30px hsla(192, 70%, 52%, 0.6), 0 0 60px hsla(192, 70%, 52%, 0.3);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 192 70% 60%;
+    --primary-foreground: 225 72% 10%;
+
+    --secondary: 210 68% 55%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 195 100% 45%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 16 80% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 168 84% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+
+  /* Shadow Glow Button */
+  .btn-glow {
+    @apply relative px-6 py-3 md:px-8 md:py-4 bg-secondary text-secondary-foreground font-bold rounded-xl transition-all duration-300 ease-out transform text-sm md:text-base;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-glow:hover {
+    @apply scale-105;
+    box-shadow: var(--shadow-glow-hover);
+  }
+
+  /* Solid Button (No Glow) */
+  .btn-solid {
+    @apply relative px-6 py-3 md:px-8 md:py-4 bg-secondary text-secondary-foreground font-bold rounded-xl transition-all duration-300 ease-out transform text-sm md:text-base;
+  }
+
+  .btn-solid:hover {
+    @apply scale-105 bg-secondary/90;
+  }
+
+  .btn-glow::before {
+    content: '';
+    @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsla(195, 100%, 55%, 0.3), hsla(205, 90%, 40%, 0.3));
+  }
+
+  .btn-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Pain Card Styling */
+  .pain-card {
+    @apply relative bg-destructive/5 border-2 border-destructive/20 rounded-2xl p-6 transition-all duration-300 hover:border-destructive/40 hover:shadow-lg;
+  }
+
+  .pain-icon {
+    @apply w-14 h-14 rounded-full bg-destructive/10 flex items-center justify-center text-destructive text-2xl mb-4;
+  }
+
+  /* Service Card */
+  .service-card {
+    @apply bg-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2;
+    box-shadow: var(--shadow-card);
+  }
+
+  .service-card:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  /* Pricing Card */
+  .pricing-card {
+    @apply bg-card rounded-3xl p-6 md:p-8 border border-border transition-all duration-500;
+    box-shadow: var(--shadow-card);
+  }
+
+  .pricing-card.featured {
+    @apply border-secondary md:scale-105 relative;
+    box-shadow: var(--shadow-glow);
+  }
+
+  @media (max-width: 768px) {
+    .pricing-card.featured {
+      @apply scale-100 border-2;
+    }
+  }
+
+  /* Section reveal animation */
+  .reveal-section {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .reveal-section.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Floating Badge */
+  .floating-badge {
+    @apply fixed top-24 right-4 z-50 bg-destructive text-destructive-foreground px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-pulse hidden lg:flex items-center gap-2;
+  }
+
+  /* FAQ Accordion */
+  .faq-item {
+    @apply border-b border-border last:border-0;
+  }
+
+  .faq-question {
+    @apply w-full py-5 flex items-center justify-between text-left font-semibold text-foreground hover:text-primary transition-colors;
+  }
+
+  .faq-answer {
+    @apply overflow-hidden transition-all duration-300;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--brand-primary)), hsl(var(--brand-teal)));
+  }
+
+  /* Hero gradient */
+  .hero-gradient {
+    background: linear-gradient(135deg,
+        hsl(var(--brand-primary)) 0%,
+        hsl(var(--brand-primary-light)) 50%,
+        hsl(var(--brand-teal)) 100%);
+  }
+
+  /* Dark banner gradient */
+  .dark-banner {
+    background: linear-gradient(135deg,
+        hsl(var(--brand-dark)) 0%,
+        hsl(222, 47%, 15%) 100%);
+  }
+
+  /* Water ripple effect */
+  .water-ripple {
+    @apply absolute inset-0 overflow-hidden;
+  }
+
+  .water-ripple::before {
+    content: '';
+    @apply absolute w-[200%] h-[200%] -top-1/2 -left-1/2;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: ripple 8s ease-in-out infinite;
+  }
+
+  @keyframes ripple {
+
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+      transform: translate(-5%, -5%) scale(1.1);
+    }
+  }
+
+  /* Testimonial card */
+  .testimonial-card {
+    @apply bg-card rounded-2xl p-6 border border-border;
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Performance-friendly CSS animations - don't block LCP */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

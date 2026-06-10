@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Droplets, Shield, Clock, UserCheck } from "lucide-react";
-import heroPoolPremium from "@/assets/hero-munay-canary-pool.png";
+import heroPoolPremium from "@/assets/hero-munay-canary-pool.webp";
 
 const HeroSection = () => {
   return (
