@@ -149,6 +149,27 @@ const ContactSection = () => {
                   <p className="text-muted-foreground text-xs md:text-base">Lun - Vie: 8:00 - 13:30, 16:00 - 19:00</p>
                 </div>
               </div>
+
+              {/* Idiomas */}
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0 text-xl leading-none">
+                  🌍
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground text-sm md:text-base">Hablamos tu idioma</h4>
+                  <div className="flex items-center gap-3 mt-1">
+                    <span className="flex items-center gap-1.5 text-muted-foreground text-xs md:text-sm">
+                      <span className="text-base leading-none">🇪🇸</span> Español
+                    </span>
+                    <span className="flex items-center gap-1.5 text-muted-foreground text-xs md:text-sm">
+                      <span className="text-base leading-none">🇬🇧</span> English
+                    </span>
+                    <span className="flex items-center gap-1.5 text-muted-foreground text-xs md:text-sm">
+                      <span className="text-base leading-none">🇩🇪</span> Deutsch
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
 

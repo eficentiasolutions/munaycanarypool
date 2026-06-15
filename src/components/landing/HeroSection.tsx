@@ -104,6 +104,11 @@ const HeroSection = () => {
                 <span className="whitespace-nowrap">{text}</span>
               </div>
             ))}
+            {/* Idiomas */}
+            <div className="col-span-2 sm:col-span-1 flex items-center justify-center gap-2 bg-white/15 backdrop-blur-md text-white px-3 py-2.5 rounded-xl border border-white/25 font-medium text-xs sm:text-sm shadow-md">
+              <span className="text-base leading-none">🇪🇸🇬🇧🇩🇪</span>
+              <span className="whitespace-nowrap">We speak English · Wir sprechen Deutsch</span>
+            </div>
           </div>
 
         </div>
