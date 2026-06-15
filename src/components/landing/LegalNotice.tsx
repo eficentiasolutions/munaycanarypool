@@ -20,7 +20,7 @@ const LegalNotice = () => {
 
                     <h3>2. USUARIOS</h3>
                     <p>
-                        El acceso y/o uso de este portal de Munay Canary Pool atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones serán de aplicación independientemente de las Condiciones Generales de Contratación que en su caso resulten de obligado cumplimiento.
+                        El acceso y/o uso del portal "Munay Canary Pool" atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones serán de aplicación independientemente de las Condiciones Generales de Contratación que en su caso resulten de obligado cumplimiento.
                     </p>
 
                     <h3>3. USO DEL PORTAL</h3>

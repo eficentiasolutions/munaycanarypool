@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/70 mb-4 md:mb-6 max-w-md text-sm md:text-base">
-              En Munay Canary Pool redefinimos la experiencia de tener piscina en las Islas Canarias. Nuestro enfoque técnico y proactivo garantiza un agua saludable y cristalina todo el año, para que tú solo te ocupes de lo importante: disfrutarla.
+              En Munay Canary Pool redefinimos la experiencia de tener piscina en Gran Canaria. Nuestro enfoque técnico y proactivo garantiza un agua saludable y cristalina todo el año, para que tú solo te ocupes de lo importante: disfrutarla.
             </p>
             <div className="flex gap-3 md:gap-4">
               {[

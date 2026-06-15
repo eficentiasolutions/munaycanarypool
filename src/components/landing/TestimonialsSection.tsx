@@ -5,8 +5,8 @@ import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Javier M.",
-    initials: "JM",
+    name: "Ayose M.",
+    initials: "AM",
     color: "bg-blue-600",
     location: "Villa vacacional, Maspalomas",
     quote:
@@ -14,17 +14,17 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Elena T.",
-    initials: "ET",
+    name: "Guacimara T.",
+    initials: "GT",
     color: "bg-cyan-600",
     location: "Administradora de Fincas, Las Palmas de Gran Canaria",
     quote:
-      "Gestionamos varias comunidades en Las Palmas y la exigencia es máxima. Desde que contamos con ellos las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima de la isla.",
+      "Gestionamos varias comunidades en Las Palmas de Gran Canaria y la exigencia es máxima. Desde que contamos con ellos las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima de la isla.",
     rating: 5,
   },
   {
-    name: "Roberto S.",
-    initials: "RS",
+    name: "Ancor S.",
+    initials: "AS",
     color: "bg-indigo-600",
     location: "Chalet privado, Telde",
     quote:
@@ -32,19 +32,19 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Carmen L.",
-    initials: "CL",
+    name: "Yaiza F.",
+    initials: "YF",
     color: "bg-teal-600",
-    location: "Comunidad de vecinos, Vecindario",
+    location: "Comunidad de vecinos, Playa del Inglés",
     quote:
       "Llevábamos años con problemas de algas cada verano. Desde que contratamos el plan Premium no hemos tenido ni una sola incidencia. Profesionales de verdad, cumplen siempre lo que prometen.",
     rating: 5,
   },
   {
-    name: "Miguel A.",
-    initials: "MA",
+    name: "Jonay R.",
+    initials: "JR",
     color: "bg-sky-700",
-    location: "Propietario de chalet, San Bartolomé de Tirajana",
+    location: "Propietario de chalet, Puerto Rico",
     quote:
       "El precio es justo y el servicio impecable. Vinieron a revisar la piscina sin coste y nos explicaron todo con detalle. Ahora tenemos el agua siempre en perfecto estado sin preocuparnos de nada.",
     rating: 5,
@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
             <span className="gradient-text">Clientes Felices</span>
           </h2>
           <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto px-2">
-            Historias reales de propietarios que recuperaron su tranquilidad en las Islas Canarias
+            Historias reales de propietarios que recuperaron su tranquilidad en Gran Canaria
           </p>
         </motion.div>
 
