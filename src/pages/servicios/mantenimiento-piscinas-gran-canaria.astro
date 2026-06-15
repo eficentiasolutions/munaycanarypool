@@ -1,0 +1,421 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/landing/Navbar';
+import Footer from '../../components/landing/Footer';
+import WhatsAppButton from '../../components/landing/WhatsAppButton';
+import heroSrc from '../../assets/hero-munay-canary-pool.webp?url';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Mantenimiento de Piscinas en Gran Canaria",
+      "description": "Servicio profesional de mantenimiento de piscinas en Gran Canaria. Incluye limpieza, balance químico, revisión de equipos y mantenimiento preventivo.",
+      "url": "https://munaycanarypool.es/servicios/mantenimiento-piscinas-gran-canaria",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://munaycanarypool.es",
+        "name": "Munay Canary Pool",
+        "url": "https://munaycanarypool.es",
+        "telephone": "+34600000000",
+        "email": "info@munaycanarypool.es",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Valsequillo de Gran Canaria",
+          "addressRegion": "Las Palmas",
+          "addressCountry": "ES"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Las Palmas de Gran Canaria" },
+        { "@type": "City", "name": "Telde" },
+        { "@type": "City", "name": "Maspalomas" },
+        { "@type": "City", "name": "Playa del Inglés" },
+        { "@type": "City", "name": "Puerto Rico" },
+        { "@type": "City", "name": "Valsequillo" },
+        { "@type": "City", "name": "Santa Brígida" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes de Mantenimiento",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Mantenimiento Básico", "description": "Visita periódica con limpieza, balance químico y revisión de equipos" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Mantenimiento Premium", "description": "Mantenimiento completo + reparaciones incluidas + atención prioritaria 24 h" }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://munaycanarypool.es" },
+        { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://munaycanarypool.es/servicios" },
+        { "@type": "ListItem", "position": 3, "name": "Mantenimiento de Piscinas en Gran Canaria", "item": "https://munaycanarypool.es/servicios/mantenimiento-piscinas-gran-canaria" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta el mantenimiento de una piscina en Gran Canaria?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El precio del mantenimiento de piscinas en Gran Canaria depende del tamaño de la piscina, el tipo de tratamiento (cloro o sal) y la frecuencia de las visitas. En Munay Canary Pool ofrecemos una primera revisión de balance químico completamente gratuita para evaluar el estado de tu piscina y recomendarte el plan más adecuado sin compromiso." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Con qué frecuencia hay que mantener una piscina en Gran Canaria?",
+          "acceptedAnswer": { "@type": "Answer", "text": "En Gran Canaria, gracias al clima, las piscinas se usan prácticamente todo el año. Recomendamos un mantenimiento semanal como mínimo. En verano o tras episodios de calima, puede ser necesario un control más frecuente del cloro y pH." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye el servicio de mantenimiento de piscinas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nuestro servicio incluye: limpieza completa de fondo y paredes, vaciado y limpieza de skimmers, balance químico completo (pH, cloro, alcalinidad y dureza), limpieza de prefiltros y cestas, revisión del sistema de circulación y bomba, comprobación de presión del filtro, limpieza de bordes y línea de agua, e informe digital tras cada visita." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mantenéis piscinas de cloro y de sal?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, mantenemos todo tipo de piscinas: de cloro tradicional, de electrolisis salina, con tratamiento UV, ozono y sistemas combinados. Para piscinas de sal realizamos el control de la cloradora salina, la limpieza del electrodo y el ajuste de producción de cloro según la estación." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué zonas de Gran Canaria cubrís?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Munay Canary Pool cubre toda la isla de Gran Canaria: Valsequillo, Santa Brígida, San Mateo, Telde, Las Palmas de Gran Canaria, Maspalomas, Playa del Inglés, San Fernando, Bahía Feliz, El Salobre, Arguineguín y Puerto Rico." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si mi piscina se pone verde por la calima?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La calima es uno de los mayores enemigos de las piscinas en Gran Canaria. Si tu piscina ha perdido transparencia tras un episodio de calima, ofrecemos un servicio de recuperación con resultado garantizado. Aplicamos un tratamiento de choque profesional que devuelve el agua cristalina en 24-48 h." }
+        }
+      ]
+    }
+  ]
+};
+
+const seoProps = {
+  title: "Mantenimiento de Piscinas en Gran Canaria | Servicio Profesional",
+  description: "Mantenimiento de piscinas en Gran Canaria: limpieza semanal, balance químico y revisión de equipos. Técnico fijo, informe digital. Primera revisión GRATIS.",
+  canonical: "https://munaycanarypool.es/servicios/mantenimiento-piscinas-gran-canaria",
+  schema,
+};
+
+const whyUs = [
+  { title: "Visitas Puntuales", desc: "Llegamos el día acordado, a la hora pactada. Siempre el mismo técnico, que conoce tu piscina y sus particularidades." },
+  { title: "Agua Cristalina Garantizada", desc: "Balance químico preciso con análisis profesional. Agua siempre transparente y segura para toda la familia. Si no es así, volvemos sin coste." },
+  { title: "Garantía Total", desc: "Satisfacción garantizada. Si no estás contento con nuestro servicio, te devolvemos tu dinero. Sin letras pequeñas." },
+  { title: "Expertos en Calima", desc: "Conocemos el impacto del polvo sahariano en las piscinas de Gran Canaria y actuamos de forma preventiva para proteger tu agua." },
+  { title: "Productos Premium", desc: "Solo usamos productos certificados de máxima calidad. Seguros para niños, mascotas y el medio ambiente." },
+  { title: "Cobertura en toda la isla", desc: "Cubrimos Valsequillo, Santa Brígida, Telde, Las Palmas de GC, Maspalomas, Playa del Inglés, Puerto Rico y más." },
+];
+
+const steps = [
+  { step: "1", title: "Primera Revisión Gratuita", desc: "Acudimos a tu domicilio sin compromiso para evaluar el estado de tu piscina: tipo de tratamiento, estado de los equipos, dimensión y ubicación. Te entregamos un informe detallado y un presupuesto personalizado." },
+  { step: "2", title: "Plan de Mantenimiento Personalizado", desc: "Elaboramos un plan adaptado a tu piscina: frecuencia de visitas (semanal o quincenal), tipo de productos, atención a equipos específicos como cloradoras salinas o bombas de calor." },
+  { step: "3", title: "Visita Profesional Periódica", desc: "Nuestro técnico acude el día y hora pactados. Realiza la limpieza completa, el balance químico, la revisión de equipos y te envía un informe digital con todos los parámetros y observaciones." },
+  { step: "4", title: "Mantenimiento Preventivo Continuo", desc: "Vigilamos el desgaste de componentes, la presión del filtro, el estado de la arena y el correcto funcionamiento de bombas y skimmers. Detectamos y solucionamos pequeños problemas antes de que se conviertan en averías costosas." },
+];
+
+const faqs = [
+  { q: "¿Cuánto cuesta el mantenimiento de una piscina en Gran Canaria?", a: "El precio depende del tamaño de la piscina, el tipo de tratamiento y la frecuencia de las visitas. Ofrecemos una primera revisión completamente gratuita para evaluar el estado de tu piscina y recomendarte el plan más adecuado sin compromiso." },
+  { q: "¿Con qué frecuencia hay que mantener una piscina en Gran Canaria?", a: "En Gran Canaria las piscinas se usan prácticamente todo el año. Recomendamos un mantenimiento semanal como mínimo. Tras episodios de calima o en verano con uso intensivo, puede ser necesario un control más frecuente del cloro y pH." },
+  { q: "¿Qué incluye el servicio de mantenimiento de piscinas?", a: "Limpieza completa de fondo y paredes, vaciado y limpieza de skimmers, balance químico completo (pH, cloro, alcalinidad y dureza), limpieza de filtros, revisión del sistema de circulación y bomba, limpieza de bordes y línea de agua, e informe digital tras cada visita." },
+  { q: "¿Mantenéis piscinas de cloro y de sal?", a: "Sí, mantenemos todo tipo de piscinas: de cloro tradicional, de electrolisis salina, con UV, ozono y sistemas combinados. Para piscinas de sal realizamos el control de la cloradora, la limpieza del electrodo y el ajuste de producción de cloro." },
+  { q: "¿Qué zonas de Gran Canaria cubrís?", a: "Cubrimos toda la isla: Valsequillo, Santa Brígida, San Mateo, Telde, Las Palmas de Gran Canaria, Maspalomas, Playa del Inglés, San Fernando, Bahía Feliz, El Salobre, Arguineguín y Puerto Rico. Si tu zona no aparece, consúltanos." },
+  { q: "¿Qué pasa si mi piscina se pone verde por la calima?", a: "La calima es uno de los mayores enemigos de las piscinas en Gran Canaria. Ofrecemos un servicio de recuperación de urgencia con resultado garantizado. Aplicamos un tratamiento de choque profesional que devuelve el agua cristalina en 24-48 h." },
+  { q: "¿Hacéis mantenimiento de piscinas comunitarias?", a: "Sí, ofrecemos servicio para comunidades de vecinos y urbanizaciones. Incluimos el cumplimiento de la normativa vigente, certificados de calidad del agua y libro de registro para presentar en juntas de la comunidad." },
+  { q: "¿Por qué es mejor contratar un profesional?", a: "Un profesional garantiza un balance químico preciso, detecta problemas antes de que se conviertan en averías costosas, y te ahorra unas 80 horas al año. Además, el mantenimiento profesional prolonga la vida útil de los equipos de filtración y el revestimiento." },
+];
+
+const zonas = [
+  "Las Palmas de Gran Canaria", "Telde", "Maspalomas", "Playa del Inglés",
+  "San Fernando", "Puerto Rico", "Valsequillo", "Santa Brígida",
+  "San Mateo", "Bahía Feliz", "El Salobre", "Arguineguín",
+];
+---
+
+<BaseLayout {...seoProps}>
+  <Navbar client:load />
+  <WhatsAppButton client:load />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-[80vh] md:min-h-[70vh] overflow-hidden">
+      <img
+        src={heroSrc}
+        alt="Piscina cristalina con servicio de mantenimiento profesional en Gran Canaria"
+        fetchpriority="high"
+        loading="eager"
+        class="absolute inset-0 w-full h-full object-cover object-[center_30%] scale-[1.12] origin-top"
+      />
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-white"></div>
+      <div class="absolute inset-0 bg-brand-primary/20"></div>
+
+      <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[80vh] md:min-h-[70vh] pt-28 md:pt-32 pb-20">
+        <div class="w-full max-w-4xl mx-auto text-center">
+          <!-- Breadcrumb -->
+          <nav class="mb-6 text-sm text-white/70" aria-label="breadcrumb">
+            <a href="/" class="hover:text-white transition-colors">Inicio</a>
+            <span class="mx-2">/</span>
+            <a href="/servicios" class="hover:text-white transition-colors">Servicios</a>
+            <span class="mx-2">/</span>
+            <span class="text-white">Mantenimiento Gran Canaria</span>
+          </nav>
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 md:mb-8 tracking-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+            Mantenimiento de Piscinas en{" "}
+            <span class="font-extrabold" style="color:hsl(210,50%,75%)">Gran Canaria</span>
+          </h1>
+
+          <div class="mb-8 md:mb-12">
+            <div class="inline-block bg-white/95 backdrop-blur-md rounded-2xl px-5 py-4 md:px-8 md:py-6 border border-white/40 shadow-2xl">
+              <p class="text-base sm:text-lg md:text-xl font-bold text-brand-dark leading-tight">
+                Servicio profesional de mantenimiento de piscinas en Gran Canaria.
+              </p>
+              <p class="text-brand-primary/80 text-sm mt-2 font-medium">
+                Recupera 80 horas al año y disfruta de una piscina cristalina sin preocupaciones.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contacto" class="btn-solid inline-flex items-center justify-center gap-2 py-4 px-8">
+              💧 Primera Revisión GRATIS
+            </a>
+            <a href="tel:+34600000000" class="inline-flex items-center justify-center rounded-xl border-2 border-white bg-white/20 backdrop-blur-sm px-8 py-4 font-semibold text-white hover:bg-white/30 transition-colors">
+              📞 600 000 000
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="py-16 md:py-20 bg-background">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            ¿Por qué elegir Munay Canary Pool para el <span class="gradient-text">mantenimiento de tu piscina</span>?
+          </h2>
+          <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Especialistas en piscinas de Gran Canaria, con profundo conocimiento del clima y las condiciones locales
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {whyUs.map((item) => (
+            <div class="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
+                <svg class="w-7 h-7 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">{item.title}</h3>
+              <p class="text-muted-foreground">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Tipos de piscinas -->
+    <section class="py-16 md:py-20 bg-muted/50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Tipos de piscinas que <span class="gradient-text">mantenemos</span>
+          </h2>
+          <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Nuestros técnicos están formados para mantener cualquier tipo de piscina y sistema de tratamiento
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="bg-card rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold mb-4">Piscinas privadas</h3>
+            <p class="text-muted-foreground mb-4">Mantenemos piscinas de viviendas particulares, chalets y villas en toda Gran Canaria. Adaptamos la frecuencia de visita y el tipo de tratamiento al uso que le des a tu piscina.</p>
+            <ul class="space-y-2">
+              {["Piscinas de cloro tradicional", "Piscinas de electrolisis salina", "Piscinas con sistema UV u ozono", "Piscinas con calefacción o bomba de calor"].map((item) => (
+                <li class="flex items-center gap-2 text-sm">
+                  <svg class="w-4 h-4 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-card rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold mb-4">Piscinas comunitarias</h3>
+            <p class="text-muted-foreground mb-4">Servicio para comunidades de vecinos y urbanizaciones. Incluimos el cumplimiento de la normativa canaria de piscinas públicas, certificados de calidad del agua y libro de registro.</p>
+            <ul class="space-y-2">
+              {["Cumplimiento normativa Canarias", "Certificados de calidad del agua", "Libro de registro para juntas", "Mantenimiento de áreas infantiles y spa"].map((item) => (
+                <li class="flex items-center gap-2 text-sm">
+                  <svg class="w-4 h-4 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qué incluye -->
+    <section class="py-16 md:py-20 bg-background">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            ¿Qué incluye nuestro servicio de <span class="gradient-text">mantenimiento de piscinas</span>?
+          </h2>
+          <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Cada visita es completa. No dejamos nada al azar para que tu piscina esté siempre en perfectas condiciones
+          </p>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-card rounded-2xl p-8 md:p-12 shadow-lg">
+            <div class="space-y-6">
+              {[
+                "Limpieza completa de fondo y paredes con aspiradora profesional",
+                "Vaciado y limpieza de skimmers y cestillos",
+                "Balance químico completo (pH, cloro, alcalinidad total y dureza)",
+                "Limpieza de prefiltros, cestas del filtro y backwash cuando sea necesario",
+                "Revisión del sistema de circulación y bomba de filtración",
+                "Comprobación de presión del filtro y estado de la arena",
+                "Limpieza de bordes, escaleras y línea de agua",
+                "Control de nivel de agua y aportación si es necesario",
+                "Revisión de cloradora salina y limpieza de electrodos (piscinas de sal)",
+                "Informe digital tras cada visita con el estado completo de tu piscina",
+              ].map((item) => (
+                <div class="flex items-start gap-4">
+                  <div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <p class="text-lg">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="py-16 md:py-20 bg-muted/50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            ¿Cómo funciona nuestro <span class="gradient-text">servicio de mantenimiento</span>?
+          </h2>
+          <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Un proceso sencillo para que empieces a disfrutar de tu piscina sin preocupaciones
+          </p>
+        </div>
+        <div class="max-w-4xl mx-auto space-y-6">
+          {steps.map((item) => (
+            <div class="flex gap-6 items-start bg-card p-6 rounded-2xl shadow-sm">
+              <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">
+                {item.step}
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">{item.title}</h3>
+                <p class="text-muted-foreground">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-20 bg-background">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-3">Resolvemos tus dudas</span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Preguntas frecuentes sobre el <span class="gradient-text">mantenimiento de piscinas</span>
+          </h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+          {faqs.map((faq) => (
+            <details class="group bg-card rounded-2xl shadow-sm">
+              <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-foreground hover:text-secondary transition-colors">
+                <span class="pr-4">{faq.q}</span>
+                <span class="text-muted-foreground group-open:rotate-45 transition-transform text-xl flex-shrink-0">+</span>
+              </summary>
+              <div class="px-6 pb-6 text-muted-foreground leading-relaxed border-t border-border pt-4">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Zonas -->
+    <section class="py-16 md:py-20 bg-muted/50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Mantenimiento de piscinas en <span class="gradient-text">toda Gran Canaria</span>
+          </h2>
+          <p class="text-muted-foreground text-lg">Especialistas en mantenimiento de piscinas en todos los municipios que cubrimos</p>
+        </div>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
+          {zonas.map((zona) => (
+            <div class="flex items-center gap-3 p-4 bg-card rounded-xl shadow-sm">
+              <div class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></div>
+              <span class="font-medium">Mantenimiento de piscinas en {zona}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-muted-foreground text-sm mt-8 max-w-2xl mx-auto">
+          ¿No ves tu zona? Cubrimos toda Gran Canaria. <a href="/#contacto" class="text-secondary font-semibold hover:underline">Consúltanos</a> para confirmar disponibilidad.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cross-link -->
+    <section class="py-12 bg-background">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-card rounded-2xl p-8 shadow-sm flex flex-col md:flex-row items-center gap-6">
+          <div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <div class="flex-1 text-center md:text-left">
+            <h3 class="text-lg font-bold mb-1">¿Tu piscina necesita una limpieza a fondo?</h3>
+            <p class="text-muted-foreground text-sm">Si tu piscina lleva tiempo sin mantenimiento o el agua está verde o turbia, nuestro servicio de limpieza profesional devolverá el brillo cristalino en tiempo récord.</p>
+          </div>
+          <a href="/servicios/limpieza-piscinas-gran-canaria" class="inline-flex items-center gap-2 text-secondary font-semibold hover:gap-3 transition-all flex-shrink-0">
+            Ver limpieza profesional
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="contacto" class="py-16 md:py-24 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/80 text-secondary-foreground">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Lista para disfrutar de una piscina perfecta?</h2>
+        <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+          Solicita tu presupuesto gratuito sin compromiso. Primera visita de balance químico GRATIS en tu domicilio.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/34600000000?text=Hola,%20me%20interesa%20el%20servicio%20de%20mantenimiento%20de%20piscinas%20en%20Gran%20Canaria"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-semibold text-white shadow-lg hover:scale-105 transition-all"
+            style="background-color:#25D366"
+          >
+            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current flex-shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Directo
+          </a>
+          <a href="tel:+34600000000" class="inline-flex items-center justify-center rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-colors">
+            📞 600 000 000
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:visible />
+</BaseLayout>

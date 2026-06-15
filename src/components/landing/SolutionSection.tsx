@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Sparkles, FlaskConical, Wrench, Clock, Shield, Leaf } from "lucide-react";
+import { Sparkles, FlaskConical, Wrench, Clock, Shield, Leaf, ArrowRight } from "lucide-react";
 import logoImage from "@/assets/munay-canary-pool-logo.png?url";
 
 const services = [
@@ -13,6 +13,7 @@ const services = [
       "Método de limpieza integral que devuelve el brillo cristalino a tu piscina durante todo el año.",
     benefit: "Piscina lista para disfrutar",
     color: "from-blue-500 to-cyan-500",
+    href: "/servicios/limpieza-piscinas-gran-canaria",
   },
   {
     icon: FlaskConical,
@@ -22,6 +23,7 @@ const services = [
       "Análisis profesional y dosificación exacta para eliminar patógenos como virus y bacterias sin poner en riesgo la salud.",
     benefit: "Sin riesgos para tu familia",
     color: "from-teal-500 to-emerald-500",
+    href: "/servicios/mantenimiento-piscinas-gran-canaria",
   },
   {
     icon: Wrench,
@@ -31,6 +33,7 @@ const services = [
       "Detectamos y solucionamos problemas antes de que se conviertan en costosas reparaciones.",
     benefit: "Evita reparaciones de +2.000€",
     color: "from-indigo-500 to-purple-500",
+    href: "/servicios/mantenimiento-piscinas-gran-canaria",
   },
 ];
 
@@ -113,11 +116,17 @@ const SolutionSection = () => {
                 {service.description}
               </p>
 
-              <div className="pt-3 md:pt-4 border-t border-border">
+              <div className="pt-3 md:pt-4 border-t border-border flex items-center justify-between gap-2">
                 <span className="text-xs md:text-sm font-semibold text-secondary flex items-center gap-2">
                   <Shield className="w-4 h-4" />
                   {service.benefit}
                 </span>
+                <a
+                  href={service.href}
+                  className="inline-flex items-center gap-1 text-xs md:text-sm text-secondary font-semibold hover:gap-2 transition-all whitespace-nowrap"
+                >
+                  Ver más <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </div>
             </motion.div>
           ))}

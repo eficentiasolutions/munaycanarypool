@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import logoImage from "@/assets/munay-canary-pool-logo.png?url";
 
 const navLinks = [
-  { label: "Servicios", href: "#servicios" },
+  { label: "Servicios", href: "/servicios", external: true },
   { label: "Resultados", href: "#resultados" },
   { label: "Precios", href: "#precios" },
   { label: "FAQ", href: "#faq" },
@@ -75,7 +75,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                href={getHref(link.href)}
+                href={link.external ? link.href : getHref(link.href)}
                 className={`font-medium transition-colors hover:text-brand-primary ${isScrolled || isMobileMenuOpen ? "text-foreground" : "text-brand-dark/90"
                   }`}
               >
@@ -120,7 +120,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.label}
-                  href={getHref(link.href)}
+                  href={link.external ? link.href : getHref(link.href)}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-foreground font-medium py-2 hover:text-secondary transition-colors"
                 >

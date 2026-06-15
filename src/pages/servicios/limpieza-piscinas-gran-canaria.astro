@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/landing/Navbar';
+import Footer from '../../components/landing/Footer';
+import WhatsAppButton from '../../components/landing/WhatsAppButton';
+import heroSrc from '../../assets/hero-munay-canary-pool.webp?url';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Limpieza de Piscinas en Gran Canaria",
+      "description": "Servicio profesional de limpieza de piscinas en Gran Canaria. Limpieza completa de fondo, paredes, filtros y sistema de circulación. Resultado garantizado.",
+      "url": "https://munaycanarypool.es/servicios/limpieza-piscinas-gran-canaria",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://munaycanarypool.es",
+        "name": "Munay Canary Pool",
+        "telephone": "+34600000000",
+        "email": "info@munaycanarypool.es",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Valsequillo de Gran Canaria",
+          "addressRegion": "Las Palmas",
+          "addressCountry": "ES"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Las Palmas de Gran Canaria" },
+        { "@type": "City", "name": "Telde" },
+        { "@type": "City", "name": "Maspalomas" },
+        { "@type": "City", "name": "Playa del Inglés" },
+        { "@type": "City", "name": "Puerto Rico" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://munaycanarypool.es" },
+        { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://munaycanarypool.es/servicios" },
+        { "@type": "ListItem", "position": 3, "name": "Limpieza de Piscinas en Gran Canaria", "item": "https://munaycanarypool.es/servicios/limpieza-piscinas-gran-canaria" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda la limpieza de una piscina?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Una limpieza completa de piscina en Gran Canaria suele durar entre 2 y 4 horas dependiendo del tamaño y del estado del agua. Si la piscina está verde o muy sucia por efecto de la calima, puede requerir un tratamiento de choque previo de 24-48 h antes de la limpieza física definitiva." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede limpiar una piscina verde?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Aplicamos un tratamiento de choque con productos profesionales que eliminan algas y bacterias. Después realizamos la limpieza completa de fondo, paredes y filtros. En la mayoría de los casos el agua recupera su transparencia en 24-48 horas, con resultado garantizado." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Con qué frecuencia hay que hacer una limpieza de piscina en Gran Canaria?",
+          "acceptedAnswer": { "@type": "Answer", "text": "En Gran Canaria recomendamos una limpieza integral al menos una vez al año (puesta en marcha) más el mantenimiento periódico semanal o quincenal. Tras episodios de calima severos puede ser necesaria una limpieza de urgencia adicional." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye la limpieza de piscinas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nuestra limpieza incluye: aspiración de fondo, limpieza de paredes y escaleras, vaciado y limpieza de skimmers, limpieza de filtros (arena o cartucho), backwash y enjuague del filtro, limpieza de línea de agua y bordes, ajuste del balance químico y revisión de la bomba de circulación." }
+        }
+      ]
+    }
+  ]
+};
+
+const seoProps = {
+  title: "Limpieza de Piscinas en Gran Canaria | Servicio Profesional",
+  description: "Limpieza de piscinas en Gran Canaria: fondo, paredes, filtros y skimmers con productos certificados. Piscina verde recuperada en 24-48 h. Presupuesto GRATIS.",
+  canonical: "https://munaycanarypool.es/servicios/limpieza-piscinas-gran-canaria",
+  schema,
+};
+
+const whatIncluded = [
+  "Aspiración completa de fondo con equipo profesional",
+  "Limpieza de paredes, escaleras y bordes",
+  "Vaciado y limpieza de skimmers y cestillos",
+  "Limpieza y backwash del filtro (arena o cartucho)",
+  "Limpieza de línea de agua y coronación",
+  "Eliminación de algas y depósitos calcáreos",
+  "Balance químico completo post-limpieza",
+  "Revisión de bomba y sistema de circulación",
+  "Informe digital con estado final de la piscina",
+  "Garantía de resultado — si no quedas satisfecho, volvemos",
+];
+
+const whyUs = [
+  { title: "Resultado Garantizado", desc: "Si después de la limpieza el agua no está cristalina, volvemos sin coste adicional. Sin preguntas ni excusas." },
+  { title: "Expertos en Calima", desc: "Sabemos cómo recuperar piscinas afectadas por el polvo sahariano, uno de los problemas más comunes en Gran Canaria." },
+  { title: "Productos Certificados", desc: "Usamos productos profesionales homologados, seguros para niños, mascotas y el entorno natural de la isla." },
+  { title: "Técnico Especializado", desc: "No enviamos personal sin formación. Cada técnico conoce los problemas específicos de las piscinas en Gran Canaria." },
+];
+
+const faqs = [
+  { q: "¿Cuánto tiempo tarda la limpieza de una piscina?", a: "Una limpieza completa suele durar entre 2 y 4 horas dependiendo del tamaño y estado del agua. Si la piscina está verde por calima, puede requerir un tratamiento de choque previo de 24-48 h antes de la limpieza física definitiva." },
+  { q: "¿Se puede limpiar una piscina verde?", a: "Sí. Aplicamos un tratamiento de choque con productos profesionales que eliminan algas y bacterias. El agua recupera su transparencia en 24-48 horas, con resultado garantizado." },
+  { q: "¿Con qué frecuencia hay que hacer una limpieza en Gran Canaria?", a: "Recomendamos una limpieza integral al menos una vez al año más el mantenimiento periódico semanal o quincenal. Tras episodios de calima severos puede ser necesaria una limpieza adicional de urgencia." },
+  { q: "¿Qué incluye la limpieza de piscinas?", a: "Aspiración de fondo, limpieza de paredes y escaleras, vaciado y limpieza de skimmers, limpieza de filtros, backwash, limpieza de línea de agua y bordes, ajuste del balance químico y revisión de la bomba." },
+];
+---
+
+<BaseLayout {...seoProps}>
+  <Navbar client:load />
+  <WhatsAppButton client:load />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-[80vh] md:min-h-[70vh] overflow-hidden">
+      <img
+        src={heroSrc}
+        alt="Limpieza profesional de piscinas en Gran Canaria"
+        fetchpriority="high"
+        loading="eager"
+        class="absolute inset-0 w-full h-full object-cover object-[center_30%] scale-[1.12] origin-top"
+      />
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-white"></div>
+      <div class="absolute inset-0 bg-brand-primary/20"></div>
+
+      <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[80vh] md:min-h-[70vh] pt-28 md:pt-32 pb-20">
+        <div class="w-full max-w-4xl mx-auto text-center">
+          <nav class="mb-6 text-sm text-white/70" aria-label="breadcrumb">
+            <a href="/" class="hover:text-white transition-colors">Inicio</a>
+            <span class="mx-2">/</span>
+            <a href="/servicios" class="hover:text-white transition-colors">Servicios</a>
+            <span class="mx-2">/</span>
+            <span class="text-white">Limpieza Gran Canaria</span>
+          </nav>
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 md:mb-8 tracking-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+            Limpieza de Piscinas en{" "}
+            <span class="font-extrabold" style="color:hsl(210,50%,75%)">Gran Canaria</span>
+          </h1>
+
+          <div class="mb-8 md:mb-12">
+            <div class="inline-block bg-white/95 backdrop-blur-md rounded-2xl px-5 py-4 md:px-8 md:py-6 border border-white/40 shadow-2xl">
+              <p class="text-base sm:text-lg md:text-xl font-bold text-brand-dark leading-tight">
+                Limpieza integral de piscinas: fondo, paredes, filtros y skimmers.
+              </p>
+              <p class="text-brand-primary/80 text-sm mt-2 font-medium">
+                Piscina verde recuperada en 24-48 horas. Resultado garantizado.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contacto" class="btn-solid inline-flex items-center justify-center gap-2 py-4 px-8">
+              💧 Presupuesto GRATIS
+            </a>
+            <a href="tel:+34600000000" class="inline-flex items-center justify-center rounded-xl border-2 border-white bg-white/20 backdrop-blur-sm px-8 py-4 font-semibold text-white hover:bg-white/30 transition-colors">
+              📞 600 000 000
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qué incluye -->
+    <section class="py-16 md:py-20 bg-background">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            ¿Qué incluye nuestra <span class="gradient-text">limpieza de piscinas</span>?
+          </h2>
+          <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Una limpieza profesional completa, sin atajos ni medias tintas
+          </p>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-card rounded-2xl p-8 md:p-12 shadow-lg">
+            <div class="space-y-6">
+              {whatIncluded.map((item) => (
+                <div class="flex items-start gap-4">
+                  <div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <p class="text-lg">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="py-16 md:py-20 bg-muted/50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            ¿Por qué elegir Munay Canary Pool para la <span class="gradient-text">limpieza de tu piscina</span>?
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {whyUs.map((item) => (
+            <div class="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
+                <svg class="w-7 h-7 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">{item.title}</h3>
+              <p class="text-muted-foreground">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-20 bg-background">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-3">Resolvemos tus dudas</span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Preguntas frecuentes sobre <span class="gradient-text">limpieza de piscinas</span>
+          </h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+          {faqs.map((faq) => (
+            <details class="group bg-card rounded-2xl shadow-sm">
+              <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-foreground hover:text-secondary transition-colors">
+                <span class="pr-4">{faq.q}</span>
+                <span class="text-muted-foreground group-open:rotate-45 transition-transform text-xl flex-shrink-0">+</span>
+              </summary>
+              <div class="px-6 pb-6 text-muted-foreground leading-relaxed border-t border-border pt-4">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-link -->
+    <section class="py-12 bg-muted/30">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-card rounded-2xl p-8 shadow-sm flex flex-col md:flex-row items-center gap-6">
+          <div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v9m0 0l3-3m-3 3l-3-3"/></svg>
+          </div>
+          <div class="flex-1 text-center md:text-left">
+            <h3 class="text-lg font-bold mb-1">¿Necesitas mantenimiento periódico?</h3>
+            <p class="text-muted-foreground text-sm">Después de la limpieza, el mejor paso es un plan de mantenimiento regular para que tu piscina se mantenga siempre en perfectas condiciones.</p>
+          </div>
+          <a href="/servicios/mantenimiento-piscinas-gran-canaria" class="inline-flex items-center gap-2 text-secondary font-semibold hover:gap-3 transition-all flex-shrink-0">
+            Ver mantenimiento
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/80 text-secondary-foreground">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Tu piscina necesita una limpieza a fondo?</h2>
+        <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">Solicita tu presupuesto gratuito ahora. Resultado garantizado en 24-48 horas.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/34600000000?text=Hola,%20necesito%20una%20limpieza%20de%20piscina%20en%20Gran%20Canaria"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-semibold text-white shadow-lg hover:scale-105 transition-all"
+            style="background-color:#25D366"
+          >
+            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current flex-shrink-0" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Directo
+          </a>
+          <a href="tel:+34600000000" class="inline-flex items-center justify-center rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-colors">
+            📞 600 000 000
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:visible />
+</BaseLayout>
