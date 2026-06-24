@@ -22,19 +22,19 @@ const schema = {
         "email": "info@munaycanarypool.es",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Valsequillo de Gran Canaria",
+          "addressLocality": "Telde",
           "addressRegion": "Las Palmas",
           "addressCountry": "ES"
         }
       },
       "areaServed": [
-        { "@type": "City", "name": "Las Palmas de Gran Canaria" },
         { "@type": "City", "name": "Telde" },
-        { "@type": "City", "name": "Maspalomas" },
-        { "@type": "City", "name": "Playa del Inglés" },
-        { "@type": "City", "name": "Puerto Rico" },
         { "@type": "City", "name": "Valsequillo" },
-        { "@type": "City", "name": "Santa Brígida" }
+        { "@type": "City", "name": "Santa Brígida" },
+        { "@type": "City", "name": "Vega de San Mateo" },
+        { "@type": "City", "name": "Melenara" },
+        { "@type": "City", "name": "Taliarte" },
+        { "@type": "City", "name": "Salinetas" }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -85,7 +85,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "¿Qué zonas de Gran Canaria cubrís?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Munay Canary Pool cubre toda la isla de Gran Canaria: Valsequillo, Santa Brígida, San Mateo, Telde, Las Palmas de Gran Canaria, Maspalomas, Playa del Inglés, San Fernando, Bahía Feliz, El Salobre, Arguineguín y Puerto Rico." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Munay Canary Pool trabaja en Telde, Valsequillo, Santa Brígida, Vega de San Mateo, Melenara, Taliarte y Salinetas. Contáctanos para confirmar disponibilidad en tu zona." }
         },
         {
           "@type": "Question",
@@ -110,7 +110,7 @@ const whyUs = [
   { title: "Garantía Total", desc: "Satisfacción garantizada. Si no estás contento con nuestro servicio, te devolvemos tu dinero. Sin letras pequeñas." },
   { title: "Expertos en Calima", desc: "Conocemos el impacto del polvo sahariano en las piscinas de Gran Canaria y actuamos de forma preventiva para proteger tu agua." },
   { title: "Productos Premium", desc: "Solo usamos productos certificados de máxima calidad. Seguros para niños, mascotas y el medio ambiente." },
-  { title: "Cobertura en toda la isla", desc: "Cubrimos Valsequillo, Santa Brígida, Telde, Las Palmas de GC, Maspalomas, Playa del Inglés, Puerto Rico y más." },
+  { title: "Zona de trabajo", desc: "Telde, Valsequillo, Santa Brígida, Vega de San Mateo, Melenara, Taliarte y Salinetas." },
 ];
 
 const steps = [
@@ -125,16 +125,15 @@ const faqs = [
   { q: "¿Con qué frecuencia hay que mantener una piscina en Gran Canaria?", a: "En Gran Canaria las piscinas se usan prácticamente todo el año. Recomendamos un mantenimiento semanal como mínimo. Tras episodios de calima o en verano con uso intensivo, puede ser necesario un control más frecuente del cloro y pH." },
   { q: "¿Qué incluye el servicio de mantenimiento de piscinas?", a: "Limpieza completa de fondo y paredes, vaciado y limpieza de skimmers, balance químico completo (pH, cloro, alcalinidad y dureza), limpieza de filtros, revisión del sistema de circulación y bomba, limpieza de bordes y línea de agua, e informe digital tras cada visita." },
   { q: "¿Mantenéis piscinas de cloro y de sal?", a: "Sí, mantenemos todo tipo de piscinas: de cloro tradicional, de electrolisis salina, con UV, ozono y sistemas combinados. Para piscinas de sal realizamos el control de la cloradora, la limpieza del electrodo y el ajuste de producción de cloro." },
-  { q: "¿Qué zonas de Gran Canaria cubrís?", a: "Cubrimos toda la isla: Valsequillo, Santa Brígida, San Mateo, Telde, Las Palmas de Gran Canaria, Maspalomas, Playa del Inglés, San Fernando, Bahía Feliz, El Salobre, Arguineguín y Puerto Rico. Si tu zona no aparece, consúltanos." },
+  { q: "¿Qué zonas cubrís?", a: "Trabajamos en Telde, Valsequillo, Santa Brígida, Vega de San Mateo, Melenara, Taliarte y Salinetas. Si tu zona no aparece, consúltanos." },
   { q: "¿Qué pasa si mi piscina se pone verde por la calima?", a: "La calima es uno de los mayores enemigos de las piscinas en Gran Canaria. Ofrecemos un servicio de recuperación de urgencia con resultado garantizado. Aplicamos un tratamiento de choque profesional que devuelve el agua cristalina en 24-48 h." },
   { q: "¿Hacéis mantenimiento de piscinas comunitarias?", a: "Sí, ofrecemos servicio para comunidades de vecinos y urbanizaciones. Incluimos el cumplimiento de la normativa vigente, certificados de calidad del agua y libro de registro para presentar en juntas de la comunidad." },
   { q: "¿Por qué es mejor contratar un profesional?", a: "Un profesional garantiza un balance químico preciso, detecta problemas antes de que se conviertan en averías costosas, y te ahorra unas 80 horas al año. Además, el mantenimiento profesional prolonga la vida útil de los equipos de filtración y el revestimiento." },
 ];
 
 const zonas = [
-  "Las Palmas de Gran Canaria", "Telde", "Maspalomas", "Playa del Inglés",
-  "San Fernando", "Puerto Rico", "Valsequillo", "Santa Brígida",
-  "San Mateo", "Bahía Feliz", "El Salobre", "Arguineguín",
+  "Telde", "Valsequillo", "Santa Brígida", "Vega de San Mateo",
+  "Melenara", "Taliarte", "Salinetas",
 ];
 ---
 

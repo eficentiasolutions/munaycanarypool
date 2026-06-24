@@ -8,7 +8,7 @@ const testimonials = [
     name: "Ayose M.",
     initials: "AM",
     color: "bg-blue-600",
-    location: "Villa vacacional, Maspalomas",
+    location: "Villa vacacional, Melenara",
     quote:
       "Vivo en la península y siempre me preocupaba el estado de la piscina al llegar a Gran Canaria. Con Munay Canary Pool llego y el agua está perfecta cada vez. Los reportes con fotos tras cada visita me dan tranquilidad total.",
     rating: 5,
@@ -17,9 +17,9 @@ const testimonials = [
     name: "Guacimara T.",
     initials: "GT",
     color: "bg-cyan-600",
-    location: "Administradora de Fincas, Las Palmas de Gran Canaria",
+    location: "Administradora de Fincas, Telde",
     quote:
-      "Gestionamos varias comunidades en Las Palmas de Gran Canaria y la exigencia es máxima. Desde que contamos con ellos las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima de la isla.",
+      "Gestionamos varias comunidades en Telde y la exigencia es máxima. Desde que contamos con ellos las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima de la isla.",
     rating: 5,
   },
   {
@@ -35,7 +35,7 @@ const testimonials = [
     name: "Yaiza F.",
     initials: "YF",
     color: "bg-teal-600",
-    location: "Comunidad de vecinos, Playa del Inglés",
+    location: "Comunidad de vecinos, Salinetas",
     quote:
       "Llevábamos años con problemas de algas cada verano. Desde que contratamos el plan Premium no hemos tenido ni una sola incidencia. Profesionales de verdad, cumplen siempre lo que prometen.",
     rating: 5,
@@ -44,7 +44,7 @@ const testimonials = [
     name: "Jonay R.",
     initials: "JR",
     color: "bg-sky-700",
-    location: "Propietario de chalet, Puerto Rico",
+    location: "Propietario de chalet, Vega de San Mateo",
     quote:
       "El precio es justo y el servicio impecable. Vinieron a revisar la piscina sin coste y nos explicaron todo con detalle. Ahora tenemos el agua siempre en perfecto estado sin preocuparnos de nada.",
     rating: 5,
