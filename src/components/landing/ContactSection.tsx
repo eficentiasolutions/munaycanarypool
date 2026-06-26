@@ -113,7 +113,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground text-sm md:text-base">Teléfono</h4>
                   <p className="text-muted-foreground text-xs md:text-base">
-                    <a href="tel:+34600000000" className="hover:text-secondary transition-colors">+34 600 000 000</a>
+                    <a href="tel:+34692433841" className="hover:text-secondary transition-colors">+34 692 433 841</a>
                   </p>
                 </div>
               </div>
@@ -226,7 +226,7 @@ const ContactSection = () => {
                     name="phone"
                     required
                     className="w-full px-3 md:px-4 py-2.5 md:py-3 rounded-lg md:rounded-xl border border-border bg-background text-foreground focus:ring-2 focus:ring-secondary focus:border-transparent transition-all text-sm md:text-base"
-                    placeholder="+34 600 000 000"
+                    placeholder="+34 692 433 841"
                   />
                 </div>
               </div>
