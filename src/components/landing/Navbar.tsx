@@ -55,6 +55,11 @@ const Navbar = () => {
         : "bg-gradient-to-b from-white/90 to-transparent"
         }`}
     >
+      <div className="flex h-[4px]">
+        <div className="flex-1 bg-white/80" />
+        <div className="flex-1" style={{ backgroundColor: "#003DA5" }} />
+        <div className="flex-1" style={{ backgroundColor: "#F9C021" }} />
+      </div>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3 md:py-4">
           {/* Logo */}
