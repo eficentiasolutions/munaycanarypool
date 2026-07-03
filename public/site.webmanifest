@@ -1,6 +1,7 @@
 {
-    "name": "DR Pools",
-    "short_name": "DR Pools",
+    "name": "Munay Canary Pool",
+    "short_name": "Munay Pool",
+    "description": "Mantenimiento profesional de piscinas en Gran Canaria",
     "icons": [
         {
             "src": "/apple-touch-icon.png",
@@ -13,7 +14,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#003DA5",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/"
 }
