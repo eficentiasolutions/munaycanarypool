@@ -94,21 +94,22 @@ const services = [
     external: false,
   },
   {
-    badge: "Seguridad · Instalador Oficial BabySecur · Gran Canaria",
-    title: "Vallas de Seguridad para Piscinas — Instalador Oficial BabySecur",
-    description: "Como instaladores oficiales de BabySecur en Gran Canaria, instalamos vallas de seguridad homologadas que protegen a los más pequeños. Cumplimiento total de la normativa de seguridad en piscinas.",
+    badge: "Seguridad · Instaladores Exclusivos BabySecur · Canarias",
+    title: "Vallas de Seguridad para Piscinas — Instaladores Exclusivos BabySecur",
+    description: "Como instaladores exclusivos de BabySecur para toda Canarias, instalamos vallas de seguridad homologadas que protegen a los más pequeños. Cumplimiento total de la normativa de seguridad en piscinas.",
     bullets: [
+      "Instaladores exclusivos BabySecur para toda Canarias",
       "Vallas homologadas y certificadas",
-      "Instalación profesional en toda Gran Canaria",
+      "Instalación profesional en todas las islas",
       "Cumplimiento normativa de seguridad",
       "Puertas con cierre de seguridad para niños",
       "Asesoramiento gratuito sobre el modelo adecuado",
-      "Instalador oficial autorizado por BabySecur",
     ],
     cta: "Ver más en BabySecur",
     href: "https://www.babysecur.com/consultas",
     popular: false,
     external: true,
+    showBrand: true,
   },
 ];
 ---
@@ -191,9 +192,24 @@ const services = [
                 </span>
               )}
               <div class="flex flex-col md:flex-row md:items-start gap-6">
+                {service.showBrand ? (
+                <div class="flex-shrink-0 flex flex-col items-center gap-1.5">
+                  <div class="w-16 h-16 rounded-xl bg-[#0a2fa3] flex items-center justify-center shadow-md">
+                    <svg viewBox="0 0 64 64" class="w-10 h-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="64" height="64" rx="12" fill="#0a2fa3"/>
+                      <path d="M12 44 C12 44 16 28 32 24 C48 20 52 44 52 44" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+                      <path d="M20 44 L20 32 Q20 26 26 26 L38 26 Q44 26 44 32 L44 44" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                      <rect x="27" y="34" width="10" height="10" rx="2" stroke="white" stroke-width="2" fill="none"/>
+                      <circle cx="32" cy="37" r="1.5" fill="white"/>
+                    </svg>
+                  </div>
+                  <span class="text-[10px] font-bold text-[#0a2fa3] tracking-wider uppercase leading-none">BabySecur</span>
+                </div>
+              ) : (
                 <div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
                   <svg class="w-7 h-7 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                 </div>
+              )}
                 <div class="flex-1">
                   <span class="text-xs font-medium text-muted-foreground">{service.badge}</span>
                   <h3 class="text-xl md:text-2xl font-bold text-foreground mt-1 mb-3">{service.title}</h3>

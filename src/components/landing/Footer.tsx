@@ -66,6 +66,11 @@ const Footer = () => {
                   Reparaciones
                 </a>
               </li>
+              <li>
+                <a href="/servicios" className="hover:text-secondary transition-colors">
+                  Instalación vallas piscina
+                </a>
+              </li>
             </ul>
           </div>
 
