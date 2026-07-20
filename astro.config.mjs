@@ -9,6 +9,17 @@ export default defineConfig({
   integrations: [
     react(),
     tailwind({ applyBaseStyles: false }),
-    sitemap(),
+    sitemap({
+      filter: (page) => ![
+        'https://munaycanarypool.es/gracias/',
+        'https://munaycanarypool.es/cookies/',
+        'https://munaycanarypool.es/aviso-legal/',
+        'https://munaycanarypool.es/privacidad/',
+      ].includes(page),
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date(),
+      customPages: [],
+    }),
   ],
 });
