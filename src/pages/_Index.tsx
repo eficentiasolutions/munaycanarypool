@@ -32,7 +32,7 @@ const Index = () => {
           content="¿Tu piscina es un placer o una carga? Recupera 80h/año con nuestro servicio profesional. Inspección GRATIS."
         />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://munaycanarypool.es" />
+        <link rel="canonical" href="https://www.munaycanarypool.es" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

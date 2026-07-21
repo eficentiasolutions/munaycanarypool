@@ -4,17 +4,17 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://munaycanarypool.es',
+  site: 'https://www.munaycanarypool.es',
   output: 'static',
   integrations: [
     react(),
     tailwind({ applyBaseStyles: false }),
     sitemap({
       filter: (page) => ![
-        'https://munaycanarypool.es/gracias/',
-        'https://munaycanarypool.es/cookies/',
-        'https://munaycanarypool.es/aviso-legal/',
-        'https://munaycanarypool.es/privacidad/',
+        'https://www.munaycanarypool.es/gracias/',
+        'https://www.munaycanarypool.es/cookies/',
+        'https://www.munaycanarypool.es/aviso-legal/',
+        'https://www.munaycanarypool.es/privacidad/',
       ].includes(page),
       changefreq: 'weekly',
       priority: 0.7,
