@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import { Send, Phone, Mail, MapPin, Clock, AlertTriangle, CheckCircle } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { Send, Phone, Mail, MapPin, Clock, AlertTriangle, CheckCircle, Loader2 } from "lucide-react";
 import logoImage from "@/assets/munay-canary-pool-logo.png?url";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedPlan, setSelectedPlan] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   useEffect(() => {
     // Function to handle URL params (for external links)
@@ -182,15 +183,37 @@ const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <form
-              action="https://formsubmit.co/info@munaycanarypool.es"
-              method="POST"
               className="bg-card rounded-2xl md:rounded-3xl shadow-sm p-5 md:p-8"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                setSubmitting(true);
+                setSubmitError("");
+                const form = e.currentTarget;
+                const fd = new FormData(form);
+                try {
+                  const res = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      name: fd.get("name"),
+                      email: fd.get("email"),
+                      phone: fd.get("phone"),
+                      message: fd.get("message"),
+                      plan: selectedPlan || "Revisión Gratuita (General)",
+                    }),
+                  });
+                  if (res.ok) {
+                    window.location.href = "/gracias";
+                  } else {
+                    setSubmitError("Ha ocurrido un error. Por favor, inténtalo de nuevo o llámanos.");
+                  }
+                } catch {
+                  setSubmitError("Ha ocurrido un error. Por favor, inténtalo de nuevo o llámanos.");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}
             >
-              <input type="hidden" name="_next" value={`${typeof window !== "undefined" ? window.location.origin : ""}/gracias`} />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value={`Nuevo contacto desde Munay Canary Pool ${selectedPlan ? `- Interesado en ${selectedPlan}` : ''}`} />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="Plan_Seleccionado" value={selectedPlan || "Revisión Gratuita (General)"} />
 
               {selectedPlan && (
                 <div className="mb-4 md:mb-6 bg-secondary/10 border border-secondary/20 rounded-lg p-3">
@@ -271,12 +294,21 @@ const ContactSection = () => {
                 </label>
               </div>
 
+              {submitError && (
+                <p className="mb-4 text-sm text-destructive bg-destructive/10 rounded-lg px-3 py-2">{submitError}</p>
+              )}
+
               <button
                 type="submit"
-                className="btn-solid w-full flex items-center justify-center gap-2 md:gap-3"
+                disabled={submitting}
+                className="btn-solid w-full flex items-center justify-center gap-2 md:gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                <Send className="w-4 h-4 md:w-5 md:h-5" />
-                {selectedPlan ? `Solicitar ${selectedPlan}` : 'Solicitar Revisión GRATIS'}
+                {submitting ? (
+                  <Loader2 className="w-4 h-4 md:w-5 md:h-5 animate-spin" />
+                ) : (
+                  <Send className="w-4 h-4 md:w-5 md:h-5" />
+                )}
+                {submitting ? 'Enviando...' : selectedPlan ? `Solicitar ${selectedPlan}` : 'Solicitar Revisión GRATIS'}
               </button>
 
               <p className="text-center text-xs md:text-sm text-muted-foreground mt-3 md:mt-4">
