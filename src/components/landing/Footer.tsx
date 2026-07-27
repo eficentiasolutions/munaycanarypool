@@ -25,8 +25,8 @@ const Footer = () => {
             </p>
             <div className="flex gap-3 md:gap-4">
               {[
-                { Icon: Facebook, href: "", label: "Facebook" },
-                { Icon: Instagram, href: "", label: "Instagram" }
+                { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61592055070840", label: "Facebook" },
+                { Icon: Instagram, href: "https://www.instagram.com/munaycanarypool/", label: "Instagram" }
               ].map(({ Icon, href, label }, index) => (
                 <a
                   key={index}
