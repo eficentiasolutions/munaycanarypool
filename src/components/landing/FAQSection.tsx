@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "¿Trabajan en mi zona?",
     answer:
-      "Actualmente damos servicio en: Telde, Valsequillo, Santa Brígida, Vega de San Mateo, Melenara, Taliarte, Salinetas, Bahía Feliz, San Agustín, Maspalomas, Las Palmas de Gran Canaria, Arguineguín y Puerto Rico. Contáctanos para confirmar disponibilidad en tu zona.",
+      "Actualmente damos servicio en: Telde, Valsequillo, Santa Brígida, Vega de San Mateo, Melenara, Taliarte, Salinetas, Meloneras, San Fernando, El Salobre, Puerto Rico, Arguineguín, San Agustín, El Tablero, Bahía Feliz, Playa del Inglés, Mogán y Maspalomas. Contáctanos para confirmar disponibilidad en tu zona.",
   },
   {
     question: "¿Puedo cambiar o cancelar mi plan en cualquier momento?",

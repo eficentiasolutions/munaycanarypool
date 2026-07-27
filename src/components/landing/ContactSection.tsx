@@ -137,7 +137,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground text-sm md:text-base">Zonas</h4>
-                  <p className="text-muted-foreground text-xs md:text-base">Telde · Valsequillo · Santa Brígida · Vega de San Mateo · Melenara · Taliarte · Salinetas</p>
+                  <p className="text-muted-foreground text-xs md:text-base">Telde · Valsequillo · Santa Brígida · Melenara · Salinetas · Maspalomas · Meloneras · San Fernando · Mogán · Arguineguín · Playa del Inglés · Bahía Feliz y más</p>
                 </div>
               </div>
 
