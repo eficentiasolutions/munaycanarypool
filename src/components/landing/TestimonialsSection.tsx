@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote, ExternalLink } from "lucide-react";
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Munay+Canary+Pool+Mantenimiento+de+Piscinas+Gran+Canaria/@27.9919428,-15.5207894,17z/data=!4m18!1m9!3m8!1s0x13fea7b6c27f1b1:0xedcbd038fd1a4cd9!2sMunay+Canary+Pool+Mantenimiento+de+Piscinas+Gran+Canaria!8m2!3d27.9919428!4d-15.5207894!9m1!1b1!16s%2Fg%2F11zh16q7my!3m7!1s0x13fea7b6c27f1b1:0xedcbd038fd1a4cd9!8m2!3d27.9919428!4d-15.5207894!9m1!1b1!16s%2Fg%2F11zh16q7my?hl=es&entry=ttu";
@@ -70,8 +70,14 @@ const TestimonialsSection = () => {
   const visible = 3;
   const maxIndex = testimonials.length - visible;
 
-  const prev = () => setCurrent((c) => Math.max(c - 1, 0));
-  const next = () => setCurrent((c) => Math.min(c + 1, maxIndex));
+  const next = useCallback(() => setCurrent((c) => (c >= maxIndex ? 0 : c + 1)), [maxIndex]);
+  const prev = useCallback(() => setCurrent((c) => (c <= 0 ? maxIndex : c - 1)), [maxIndex]);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [isInView, next]);
 
   return (
     <section ref={ref} className="py-12 md:py-20 lg:py-28 bg-background">
