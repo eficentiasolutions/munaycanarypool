@@ -68,7 +68,8 @@ const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
 
   const visible = 3;
-  const maxIndex = testimonials.length - visible;
+  const totalPages = Math.ceil(testimonials.length / visible);
+  const maxIndex = totalPages - 1;
 
   const next = useCallback(() => setCurrent((c) => (c >= maxIndex ? 0 : c + 1)), [maxIndex]);
   const prev = useCallback(() => setCurrent((c) => (c <= 0 ? maxIndex : c - 1)), [maxIndex]);
@@ -112,7 +113,7 @@ const TestimonialsSection = () => {
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.5 }}
             >
-              {testimonials.slice(current, current + visible).map((t, index) => (
+              {testimonials.slice(current * visible, current * visible + visible).map((t, index) => (
                 <motion.div
                   key={`${current}-${index}`}
                   initial={{ opacity: 0, y: 20 }}
