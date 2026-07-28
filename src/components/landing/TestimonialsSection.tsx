@@ -5,48 +5,48 @@ import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ayose M.",
-    initials: "AM",
+    name: "Celia Pueyo",
+    initials: "CP",
     color: "bg-blue-600",
-    location: "Villa vacacional, Melenara",
+    location: "Reseña verificada en Google",
     quote:
-      "Vivo en la península y siempre me preocupaba el estado de la piscina al llegar a Gran Canaria. Con Munay Canary Pool llego y el agua está perfecta cada vez. Los reportes con fotos tras cada visita me dan tranquilidad total.",
+      "Ha sido una experiencia fantástica, desde que mantienen mi piscina no he vuelto a preocuparme, el agua siempre está cristalina. Y en referencia al trato que te dispensan inmejorable. Gracias Munay Canary Pool.",
     rating: 5,
   },
   {
-    name: "Guacimara T.",
-    initials: "GT",
+    name: "Elias Godoy",
+    initials: "EG",
     color: "bg-cyan-600",
-    location: "Administradora de Fincas, Telde",
+    location: "Reseña verificada en Google",
     quote:
-      "Gestionamos varias comunidades en Telde y la exigencia es máxima. Desde que contamos con ellos las incidencias han bajado a cero. Son proactivos y conocen bien las particularidades del clima de la isla.",
+      "Servicio excelente, trabajo bien hecho y eficiente, Kike siempre atento a todo.",
     rating: 5,
   },
   {
-    name: "Ancor S.",
-    initials: "AS",
+    name: "Enrique Domingo",
+    initials: "ED",
     color: "bg-indigo-600",
-    location: "Chalet privado, Telde",
+    location: "Reseña verificada en Google",
     quote:
-      "Nuestra piscina se puso verde por la calima dos días antes de una fiesta. Vinieron de urgencia, diagnosticaron el problema y en 24 horas el agua estaba cristalina. Literalmente nos salvaron el evento.",
+      "Una empresa joven con profesionalidad. Muy recomendable.",
     rating: 5,
   },
   {
-    name: "Yaiza F.",
-    initials: "YF",
+    name: "Guillermo Méndez Acosta",
+    initials: "GM",
     color: "bg-teal-600",
-    location: "Comunidad de vecinos, Salinetas",
+    location: "Reseña verificada en Google",
     quote:
-      "Llevábamos años con problemas de algas cada verano. Desde que contratamos el plan Premium no hemos tenido ni una sola incidencia. Profesionales de verdad, cumplen siempre lo que prometen.",
+      "¡Genios absolutos! Dejan todo impecable.",
     rating: 5,
   },
   {
-    name: "Jonay R.",
-    initials: "JR",
+    name: "Tomás Díaz",
+    initials: "TD",
     color: "bg-sky-700",
-    location: "Propietario de chalet, Vega de San Mateo",
+    location: "Reseña verificada en Google",
     quote:
-      "El precio es justo y el servicio impecable. Vinieron a revisar la piscina sin coste y nos explicaron todo con detalle. Ahora tenemos el agua siempre en perfecto estado sin preocuparnos de nada.",
+      "Asesoramiento personalizado y profesional.",
     rating: 5,
   },
 ];
