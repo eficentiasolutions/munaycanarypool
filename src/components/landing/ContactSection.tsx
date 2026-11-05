@@ -191,7 +191,7 @@ const ContactSection = () => {
                 const form = e.currentTarget;
                 const fd = new FormData(form);
                 try {
-                  const res = await fetch("/api/contact", {
+                  const res = await fetch("https://correo-compartido-web.agencia-ia-tech.workers.dev", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
@@ -199,6 +199,7 @@ const ContactSection = () => {
                       email: fd.get("email"),
                       phone: fd.get("phone"),
                       message: fd.get("message"),
+                      website: fd.get("website") ?? "",
                       plan: selectedPlan || "Revisión Gratuita (General)",
                     }),
                   });
@@ -214,6 +215,9 @@ const ContactSection = () => {
                 }
               }}
             >
+
+              {/* Honeypot anti-bot: debe permanecer vacío */}
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
 
               {selectedPlan && (
                 <div className="mb-4 md:mb-6 bg-secondary/10 border border-secondary/20 rounded-lg p-3">
