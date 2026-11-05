@@ -4,7 +4,16 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 
+import { fileURLToPath } from 'node:url';
+
 export default defineConfig({
+  vite: {
+    resolve: {
+      alias: [
+        { find: /^lucide-react$/, replacement: fileURLToPath(new URL('./src/lib/lucide-shim.ts', import.meta.url)) },
+      ],
+    },
+  },
   site: 'https://www.munaycanarypool.es',
   output: 'static',
   adapter: cloudflare(),
