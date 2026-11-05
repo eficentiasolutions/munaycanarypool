@@ -13,8 +13,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
   const contactEmail = env.CONTACT_EMAIL ?? import.meta.env.CONTACT_EMAIL;
 
   if (!apiKey || !contactEmail) {
-    console.error('Faltan variables RESEND_API_KEY / CONTACT_EMAIL');
-    return new Response(JSON.stringify({ error: 'Configuración del servidor incompleta' }), { status: 500 });
+    const missing = [!apiKey && 'RESEND_API_KEY', !contactEmail && 'CONTACT_EMAIL'].filter(Boolean).join(', ');
+    console.error('Faltan variables:', missing);
+    return new Response(JSON.stringify({ error: `Configuración del servidor incompleta (falta: ${missing})` }), { status: 500 });
   }
   const resend = new Resend(apiKey);
 
