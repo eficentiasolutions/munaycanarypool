@@ -3,6 +3,10 @@
   "main": "./dist/_worker.js/index.js",
   "compatibility_date": "2025-05-01",
   "compatibility_flags": ["nodejs_compat"],
+  "keep_vars": true,
+  "vars": {
+    "CONTACT_EMAIL": "info@munaycanarypool.es"
+  },
   "assets": {
     "binding": "ASSETS",
     "directory": "./dist"
